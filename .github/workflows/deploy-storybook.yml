@@ -1,0 +1,34 @@
+name: Deploy Storybook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js (use the same version as in your package)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16" # Replace with your Node.js version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the Storybook
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      # Step 5: Deploy to GitHub Pages using gh-pages
+      - name: Deploy Storybook to GitHub Pages
+        run: npx gh-pages -d storybook-static
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
