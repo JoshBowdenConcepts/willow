@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Replace with your Node.js version
+          node-version: "16" # Replace with your Node.js version
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -27,7 +27,13 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      # Step 5: Deploy to GitHub Pages using gh-pages
+      # Step 5: Set Git user identity (required for `gh-pages` deployment)
+      - name: Set Git user identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      # Step 6: Deploy to GitHub Pages using gh-pages
       - name: Deploy Storybook to GitHub Pages
         run: npx gh-pages -d storybook-static
         env:
