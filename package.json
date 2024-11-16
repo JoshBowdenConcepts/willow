@@ -1,6 +1,6 @@
 {
   "name": "@jbconcepts/willow",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/my-component-library.umd.js",
   "module": "dist/my-component-library.es.js",
   "types": "dist/types/index.d.ts",
@@ -41,9 +41,12 @@
     "@storybook/react": "^8.4.4",
     "@storybook/react-vite": "^8.4.4",
     "@storybook/test": "^8.4.4",
+    "@storybook/theming": "^8.4.4",
     "@vitejs/plugin-react": "^4.3.3",
     "gh-pages": "^6.2.0",
-    "storybook": "^8.4.4"
+    "storybook": "^8.4.4",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.3.0"
   },
   "files": [
     "dist",
