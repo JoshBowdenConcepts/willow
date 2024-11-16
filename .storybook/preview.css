@@ -1,24 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
-  font-family: "Roboto", sans-serif;
-}
-
-/* Theme Tokens: */
-:root {
-  /* Spacing: */
-  --spacing-100: "2px";
-  --spacing-200: "4px";
-  --spacing-300: "8px";
-  --spacing-400: "12px";
-  --spacing-500: "16px";
-  --spacing-600: "24px";
-  --spacing-700: "32px";
-  --spacing-800: "40px";
-  --spacing-900: "48px";
-  --spacing-1000: "64px";
-  --spacing-1100: "80px";
-  --spacing-1200: "96px";
-
-  --body-font: normal normal 400 14px / 1.2 "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }

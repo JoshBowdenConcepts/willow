@@ -1,9 +1,9 @@
 .btn {
   background-color: #1f2328;
   color: white;
-  padding: 12px 28px;
+  padding: var(--spacing-400) var(--spacing-700);
   border: none;
   cursor: pointer;
-  border-radius: 8px;
-  font: var(--body-font);
+  border-radius: var(--border-radius-pill);
+  font: var(--font-p);
 }

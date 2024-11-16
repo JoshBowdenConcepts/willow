@@ -24,10 +24,20 @@ export const AllVariants: Story = {
       <Text as="h3">This is an H3 Heading</Text>
       <Text as="h4">This is an H4 Heading</Text>
       <Text as="h5">This is an H5 Heading</Text>
+      <Text as="h6">This is an H5 Heading</Text>
       <Text as="p">This is a paragraph element</Text>
       <Text as="span">This is a span element</Text>
       <Text as="strong">This is a strong element</Text>
       <Text as="em">This is an emphasized element</Text>
+      <Text as="small">This is an small element</Text>
     </div>
   ),
+};
+
+export const TextSpanAsH1: Story = {
+  args: {
+    children: "Text",
+    as: "span",
+    variant: "h1",
+  },
 };
