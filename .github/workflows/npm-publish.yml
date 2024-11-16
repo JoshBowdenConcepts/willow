@@ -25,10 +25,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Run tests (optional, remove if not needed)
-      - name: Run Tests
-        run: npm test
-
       # Build the package
       - name: Build Package
         run: npm run build

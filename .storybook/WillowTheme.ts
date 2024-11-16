@@ -9,7 +9,7 @@ export default create({
   brandTarget: "_self",
 
   // Typography
-  fontBase: '"Open Sans", sans-serif',
+  fontBase: '"Roboto", sans-serif',
   fontCode: "monospace",
 
   //
