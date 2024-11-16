@@ -5,5 +5,5 @@
   border: none;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 14px;
+  font: var(--body-font);
 }

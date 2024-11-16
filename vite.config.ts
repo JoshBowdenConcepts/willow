@@ -12,7 +12,7 @@ export default defineConfig({
       entry: "./src/index.ts",
       name: "MyComponentLibrary",
       formats: ["es", "umd"],
-      fileName: (format) => `my-component-library.${format}.js`,
+      fileName: (format) => `willow.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

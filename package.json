@@ -1,8 +1,8 @@
 {
   "name": "@jbconcepts/willow",
   "version": "1.0.6",
-  "main": "dist/my-component-library.umd.js",
-  "module": "dist/my-component-library.es.js",
+  "main": "dist/willow.umd.js",
+  "module": "dist/willow.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish": "npm publish --access public",
-    "bp": "npm run build && npm run publish"
+    "bp": "npm run build && npm run publish",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "publish-packages": "changeset publish"
   },
   "keywords": [
     "React",
@@ -33,6 +36,7 @@
     "vite": "^5.4.11"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.9",
     "@chromatic-com/storybook": "^3.2.2",
     "@storybook/addon-essentials": "^8.4.4",
     "@storybook/addon-interactions": "^8.4.4",
