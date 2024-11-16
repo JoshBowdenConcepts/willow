@@ -1,6 +1,6 @@
 {
   "name": "@jbconcepts/willow",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/my-component-library.umd.js",
   "module": "dist/my-component-library.es.js",
   "types": "dist/types/index.d.ts",
