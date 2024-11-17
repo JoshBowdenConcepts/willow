@@ -15,6 +15,16 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    label: "Button",
+    children: "Button",
   },
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <div style={{ display: "inline-grid", gap: 10 }}>
+      <Button>Primary Button</Button>
+      <Button variant="secondary">Secondary Button</Button>
+      <Button variant="tertiary">Tertiary Button</Button>
+    </div>
+  ),
 };

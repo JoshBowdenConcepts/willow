@@ -1,6 +1,6 @@
 {
   "name": "@jbconcepts/willow",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist/willow.umd.js",
   "module": "dist/willow.es.js",
   "types": "dist/types/index.d.ts",
@@ -10,7 +10,7 @@
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "publish": "npm publish --access public",
+    "publish": "npm run build && npm publish --access public",
     "bp": "npm run build && npm run publish",
     "changeset": "changeset",
     "version-packages": "changeset version",
@@ -26,10 +26,12 @@
   "description": "",
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "clsx": "^2.1.1"
   },
   "dependencies": {
     "@storybook/builder-vite": "^8.4.4",
+    "clsx": "^2.1.1",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
     "typescript": "^5.6.3",

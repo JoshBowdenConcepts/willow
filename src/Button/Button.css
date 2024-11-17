@@ -7,3 +7,30 @@
   border-radius: var(--border-radius-pill);
   font: var(--font-p);
 }
+
+.btn:hover {
+  background-color: #31373f;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #1f2328;
+  border: 1px solid #1f2328;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e7ee;
+}
+
+.btn-tertiary {
+  background-color: #8ea8c7;
+  color: #222222;
+}
+
+.btn-tertiary:hover {
+  background-color: #acb8c7;
+}
+
+.btn-fullWidth {
+  width: 100%;
+}
