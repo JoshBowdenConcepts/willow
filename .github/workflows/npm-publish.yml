@@ -10,27 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Use the Node.js version compatible with your project
-          cache: "npm"
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org/"
 
-      # Install dependencies
+      - name: Authenticate with NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - name: Install Dependencies
         run: npm install
 
-      # Build the package
       - name: Build Package
         run: npm run build
 
-      # Publish to NPM
-      - name: Publish to NPM
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx changeset publish
+      - name: Publish Package
+        run: npm publish
