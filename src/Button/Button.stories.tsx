@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 const meta: Meta<typeof Button> = {
+  title: "Components/Button",
   component: Button,
   args: {
     onClick: fn(),

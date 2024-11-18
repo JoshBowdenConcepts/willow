@@ -29,10 +29,12 @@ span {
   --spacing-1100: 80px;
   --spacing-1200: 96px;
 
+  /* Shape: */
   --border-radius-100: var(--spacing-200);
   --border-radius-200: var(--spacing-300);
   --border-radius-pill: 999em;
 
+  /* Typography */
   --font-small: normal normal 500 12px / calc(4 / 3) "Inter", sans-serif; /* 16px line height */
   --font-div: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
   --font-strong: normal normal 700 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
@@ -45,5 +47,69 @@ span {
   --font-h3: normal normal 700 40px / calc(6 / 5) "Inter", sans-serif; /* 48px line height */
   --font-h2: normal normal 700 48px / calc(7 / 6) "Inter", sans-serif; /* 56px line height */
   --font-h1: normal normal 700 60px / calc(6 / 5) "Inter", sans-serif; /* 72px line height */
-  --text-color: "#222222";
+  --text-color: #222222;
+
+  /* Colors: */
+  --brand-100: #c2ffdf;
+  --brand-200: #97ffc9;
+  --brand-300: #6dffb3;
+  --brand-400: #42ff9d;
+  --brand-500: #2de988;
+  --brand-600: #1ac76d;
+  --brand-700: #0ba555;
+  --brand-800: #00833f;
+  --brand-900: #00612f;
+
+  --neutral-100: #dfeffe;
+  --neutral-200: #c1ddf9;
+  --neutral-300: #a8c5df;
+  --neutral-400: #91acc6;
+  --neutral-500: #7b94ac;
+  --neutral-600: #667d93;
+  --neutral-700: #52667a;
+  --neutral-800: #3f5060;
+  --neutral-900: #2d3a47;
+
+  --success-100: #c2ffc4;
+  --success-200: #97ff9c;
+  --success-300: #6dff74;
+  --success-400: #42ff4b;
+  --success-500: #2ee936;
+  --success-600: #1ac722;
+  --success-700: #0ba512;
+  --success-800: #008306;
+  --success-900: #006105;
+
+  --warning-100: #ffeaba;
+  --warning-200: #ffdc8a;
+  --warning-300: #ffcd5a;
+  --warning-400: #ffbf2a;
+  --warning-500: #e7a918;
+  --warning-600: #c58c08;
+  --warning-700: #a37200;
+  --warning-800: #815a00;
+  --warning-900: #5f4300;
+
+  --error-100: #ffc8c2;
+  --error-200: #ffa197;
+  --error-300: #ff7b6d;
+  --error-400: #ff5542;
+  --error-500: #e9402e;
+  --error-600: #c72b1a;
+  --error-700: #a51a0b;
+  --error-800: #830d00;
+  --error-900: #610a00;
+
+  --info-100: #c2d4ff;
+  --info-200: #97b6ff;
+  --info-300: #6d99ff;
+  --info-400: #427bff;
+  --info-500: #2e66e9;
+  --info-600: #1a4ec7;
+  --info-700: #0b39a5;
+  --info-800: #002783;
+  --info-900: #001d61;
+
+  --black: #222222;
+  --white: #ffffff;
 }

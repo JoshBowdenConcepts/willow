@@ -2,24 +2,28 @@ import clsx from "clsx";
 import React, { HTMLAttributes } from "react";
 import { spacingStyles, SpacingStyles } from "../utils/spacingStyles";
 
-import "./Card.css";
+import "./Container.css";
 
-export type CardProps = HTMLAttributes<HTMLElement> & SpacingStyles;
+export type ContainerProps = HTMLAttributes<HTMLElement> & SpacingStyles;
 
-export const Card = ({
+export const Container = ({
   children,
   className,
-  padding,
+  padding = [500],
   margin,
   ...rest
-}: CardProps) => {
+}: ContainerProps) => {
   console.log("padding", margin);
   const spaceStyles = spacingStyles({ padding, margin });
 
   console.log(spaceStyles);
 
   return (
-    <article style={spaceStyles} className={clsx("card", className)} {...rest}>
+    <article
+      style={spaceStyles}
+      className={clsx("container", className)}
+      {...rest}
+    >
       {children}
     </article>
   );

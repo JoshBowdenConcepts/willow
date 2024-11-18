@@ -1,6 +1,6 @@
 .btn {
-  background-color: #1f2328;
-  color: white;
+  background-color: var(--brand-600);
+  color: var(--white);
   padding: var(--spacing-400) var(--spacing-700);
   border: none;
   cursor: pointer;
@@ -9,26 +9,38 @@
 }
 
 .btn:hover {
-  background-color: #31373f;
+  background-color: var(--brand-700);
+}
+
+.btn:active {
+  background-color: var(--brand-800);
 }
 
 .btn-secondary {
-  background-color: white;
-  color: #1f2328;
-  border: 1px solid #1f2328;
+  background-color: var(--white);
+  border: 1px solid var(--brand-600);
+  color: var(--brand-900);
 }
 
 .btn-secondary:hover {
-  background-color: #e0e7ee;
+  background-color: var(--brand-100);
+}
+
+.btn-secondary:active {
+  background-color: var(--brand-200);
 }
 
 .btn-tertiary {
-  background-color: #8ea8c7;
-  color: #222222;
+  background-color: var(--neutral-200);
+  color: var(--black);
 }
 
 .btn-tertiary:hover {
-  background-color: #acb8c7;
+  background-color: var(--neutral-300);
+}
+
+.btn-tertiary:active {
+  background-color: var(--neutral-400);
 }
 
 .btn-fullWidth {
