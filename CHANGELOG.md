@@ -1,5 +1,13 @@
 # @jbconcepts/willow
 
+## 1.0.14
+
+### Patch Changes
+
+- af40df8: - Updated CSS Tokens w/ Palette
+  - Updated Button to use Palette
+  - Updated Container to have Base Padding
+
 ## 1.0.13
 
 ### Patch Changes
