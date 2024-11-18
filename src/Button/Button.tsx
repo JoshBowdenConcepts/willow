@@ -19,11 +19,13 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   variant = "primary",
   fullWidth = false,
+  ...rest
 }) => {
   return (
     <button
       className={clsx("btn", `btn-${variant}`, fullWidth && "btn-fullWidth")}
       onClick={onClick}
+      {...rest}
     >
       <Text as="span">{children}</Text>
     </button>

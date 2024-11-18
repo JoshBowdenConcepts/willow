@@ -39,11 +39,11 @@ type TextTags = {
 
 type TextProps = TextTags & {};
 
-export const Text = ({ as: Component = "p", variant, ...props }: TextProps) => {
+export const Text = ({ as: Component = "p", variant, ...rest }: TextProps) => {
   return (
     <Component
       style={{ font: `var(--font-${variant || Component})` }}
-      {...props}
+      {...rest}
     />
   );
 };

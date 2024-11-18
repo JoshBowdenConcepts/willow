@@ -1,5 +1,11 @@
 # @jbconcepts/willow
 
+## 1.0.13
+
+### Patch Changes
+
+- Added functionality for margin and spacing
+
 ## 1.0.12
 
 ### Patch Changes
