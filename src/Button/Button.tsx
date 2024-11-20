@@ -12,6 +12,10 @@ export type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
    * Sets the button width to fullWidth, defaults to false
    */
   fullWidth?: boolean;
+  /*
+   * Sets the state of the button to be disabled
+   */
+  disabled?: boolean;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,10 +23,12 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   variant = "primary",
   fullWidth = false,
+  disabled,
   ...rest
 }) => {
   return (
     <button
+      disabled={disabled}
       className={clsx("btn", `btn-${variant}`, fullWidth && "btn-fullWidth")}
       onClick={onClick}
       {...rest}

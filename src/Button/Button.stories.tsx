@@ -29,3 +29,17 @@ export const AllVariants: Story = {
     </div>
   ),
 };
+
+export const DisabledVariants: Story = {
+  render: () => (
+    <div style={{ display: "inline-grid", gap: 10 }}>
+      <Button disabled>Primary Button</Button>
+      <Button disabled variant="secondary">
+        Secondary Button
+      </Button>
+      <Button disabled variant="tertiary">
+        Tertiary Button
+      </Button>
+    </div>
+  ),
+};

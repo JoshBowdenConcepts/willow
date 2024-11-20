@@ -30,8 +30,8 @@ span {
   --spacing-1200: 96px;
 
   /* Shape: */
-  --border-radius-100: var(--spacing-200);
-  --border-radius-200: var(--spacing-300);
+  --border-radius-100: var(--spacing-300);
+  --border-radius-200: var(--spacing-400);
   --border-radius-pill: 999em;
 
   /* Typography */
@@ -50,35 +50,35 @@ span {
   --text-color: #222222;
 
   /* Colors: */
-  --brand-100: #c2ffdf;
-  --brand-200: #97ffc9;
-  --brand-300: #6dffb3;
-  --brand-400: #42ff9d;
-  --brand-500: #2de988;
-  --brand-600: #1ac76d;
-  --brand-700: #0ba555;
-  --brand-800: #00833f;
-  --brand-900: #00612f;
+  --brand-100: #cde0e3;
+  --brand-200: #adccd0;
+  --brand-300: #8fb8bc;
+  --brand-400: #73a3a9;
+  --brand-500: #5a8f95;
+  --brand-600: #457a80;
+  --brand-700: #33666c;
+  --brand-800: #265257;
+  --brand-900: #1d3e42;
 
-  --neutral-100: #dfeffe;
-  --neutral-200: #c1ddf9;
-  --neutral-300: #a8c5df;
-  --neutral-400: #91acc6;
-  --neutral-500: #7b94ac;
-  --neutral-600: #667d93;
-  --neutral-700: #52667a;
-  --neutral-800: #3f5060;
-  --neutral-900: #2d3a47;
+  --neutral-100: #dcddde;
+  --neutral-200: #c6c6c9;
+  --neutral-300: #b0b0b4;
+  --neutral-400: #9a9b9f;
+  --neutral-500: #85868a;
+  --neutral-600: #717276;
+  --neutral-700: #5d5e62;
+  --neutral-800: #4b4b4e;
+  --neutral-900: #38393c;
 
-  --success-100: #c2ffc4;
-  --success-200: #97ff9c;
-  --success-300: #6dff74;
-  --success-400: #42ff4b;
-  --success-500: #2ee936;
-  --success-600: #1ac722;
-  --success-700: #0ba512;
-  --success-800: #008306;
-  --success-900: #006105;
+  --success-100: #b2eabe;
+  --success-200: #7dda96;
+  --success-300: #41c872;
+  --success-400: #00b452;
+  --success-500: #00a037;
+  --success-600: #008a21;
+  --success-700: #007410;
+  --success-800: #005d06;
+  --success-900: #004705;
 
   --warning-100: #ffeaba;
   --warning-200: #ffdc8a;
@@ -90,26 +90,33 @@ span {
   --warning-800: #815a00;
   --warning-900: #5f4300;
 
-  --error-100: #ffc8c2;
-  --error-200: #ffa197;
-  --error-300: #ff7b6d;
-  --error-400: #ff5542;
-  --error-500: #e9402e;
-  --error-600: #c72b1a;
-  --error-700: #a51a0b;
-  --error-800: #830d00;
-  --error-900: #610a00;
+  --error-100: #ffcbb6;
+  --error-200: #ffa88a;
+  --error-300: #ff8663;
+  --error-400: #ff6641;
+  --error-500: #f54626;
+  --error-600: #dc290e;
+  --error-700: #be0e00;
+  --error-800: #9c0000;
+  --error-900: #790400;
 
-  --info-100: #c2d4ff;
-  --info-200: #97b6ff;
-  --info-300: #6d99ff;
-  --info-400: #427bff;
-  --info-500: #2e66e9;
-  --info-600: #1a4ec7;
-  --info-700: #0b39a5;
-  --info-800: #002783;
-  --info-900: #001d61;
+  --info-100: #c8deff;
+  --info-200: #a2c9ff;
+  --info-300: #79b4fc;
+  --info-400: #4b9ff2;
+  --info-500: #008be3;
+  --info-600: #0077ce;
+  --info-700: #0063b3;
+  --info-800: #004f94;
+  --info-900: #003c71;
 
-  --black: #222222;
+  --black: #000000;
   --white: #ffffff;
+
+  --text-base: #000000;
+  --text-subtle: #222222;
+  --text-disabled: #5f5f5f;
+  --text-contrast-base: #ffffff;
+  --text-contrast-subtle: #e4e4e4;
+  --text-contrast-disabled: #999999;
 }

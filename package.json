@@ -1,6 +1,6 @@
 {
   "name": "@jbconcepts/willow",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "dist/willow.umd.js",
   "module": "dist/willow.es.js",
   "types": "dist/types/index.d.ts",

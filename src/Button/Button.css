@@ -1,38 +1,70 @@
 .btn {
-  background-color: var(--brand-600);
-  color: var(--white);
+  background-color: var(--brand-500);
+  color: var(--text-contrast-base);
   padding: var(--spacing-400) var(--spacing-700);
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
-  border-radius: var(--border-radius-pill);
+  border-radius: var(--border-radius-100);
   font: var(--font-p);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  outline-color: var(--brand-500);
 }
 
 .btn:hover {
-  background-color: var(--brand-700);
+  background-color: var(--brand-600);
 }
 
 .btn:active {
-  background-color: var(--brand-800);
+  background-color: var(--brand-700);
 }
 
-.btn-secondary {
-  background-color: var(--white);
-  border: 1px solid var(--brand-600);
-  color: var(--brand-900);
-}
-
-.btn-secondary:hover {
-  background-color: var(--brand-100);
-}
-
-.btn-secondary:active {
+.btn:disabled {
   background-color: var(--brand-200);
 }
 
+/* Secondary State */
+
+.btn-secondary {
+  background-color: var(--brand-100);
+  border-color: var(--brand-600);
+  color: var(--brand-600);
+}
+
+.btn-secondary:focus {
+  outline-color: var(--brand-600);
+  border-color: var(--brand-600);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-800);
+  background-color: var(--brand-100);
+  color: var(--brand-800);
+}
+
+.btn-secondary:active {
+  background-color: var(--brand-100);
+  border-color: var(--brand-800);
+}
+
+.btn-secondary:disabled {
+  background-color: var(--white);
+  color: var(--brand-200);
+  border-color: var(--brand-200);
+}
+
+/* Tertiary State */
+
 .btn-tertiary {
-  background-color: var(--neutral-200);
-  color: var(--black);
+  background-color: var(--neutral-100);
+  color: var(--text-base);
+}
+
+.btn-tertiary:focus {
+  outline-color: var(--brand-600);
 }
 
 .btn-tertiary:hover {
@@ -40,9 +72,10 @@
 }
 
 .btn-tertiary:active {
-  background-color: var(--neutral-400);
+  background-color: var(--neutral-300);
 }
 
-.btn-fullWidth {
-  width: 100%;
+.btn-tertiary:disabled {
+  background-color: var(--neutral-100);
+  color: var(--text-disabled);
 }
