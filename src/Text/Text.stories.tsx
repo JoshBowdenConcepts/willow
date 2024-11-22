@@ -35,6 +35,24 @@ export const AllVariants: Story = {
   ),
 };
 
+export const AllVariantsViaVariantProp: Story = {
+  render: () => (
+    <div style={{ display: "grid" }}>
+      <Text variant="h1">This is an H1 Heading</Text>
+      <Text variant="h2">This is an H2 Heading</Text>
+      <Text variant="h3">This is an H3 Heading</Text>
+      <Text variant="h4">This is an H4 Heading</Text>
+      <Text variant="h5">This is an H5 Heading</Text>
+      <Text variant="h6">This is an H5 Heading</Text>
+      <Text variant="p">This is a paragraph element</Text>
+      <Text variant="span">This is a span element</Text>
+      <Text variant="strong">This is a strong element</Text>
+      <Text variant="em">This is an emphasized element</Text>
+      <Text variant="small">This is an small element</Text>
+    </div>
+  ),
+};
+
 export const TextSpanAsH1: Story = {
   args: {
     children: "Text",

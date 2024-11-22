@@ -43,6 +43,7 @@ type TextProps = TextTags & {
 };
 
 // NOTE: The omit then override is a bit annoying but it works
+// BUG: It seems running both as and variant break for some reason
 export const Text = ({
   as: Component = "p",
   variant,

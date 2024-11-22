@@ -1,18 +1,27 @@
 import clsx from "clsx";
 import React, { HTMLAttributes } from "react";
-import { spacingStyles, SpacingStyles, DisplayStyles } from "../utils";
+import {
+  spacingStyles,
+  SpacingStyles,
+  DisplayStyles,
+  SizeProps,
+  createSizeStyles,
+} from "../utils";
 
 import "./Container.css";
 
 export type ContainerProps = HTMLAttributes<HTMLElement> &
   SpacingStyles &
-  DisplayStyles;
+  DisplayStyles &
+  SizeProps;
 
 export const Container = ({
   children,
   className,
-  padding = [500],
+  // Spacing Props
+  padding = [0],
   margin,
+  // Display Props
   display,
   flexDirection,
   justifyContent,
@@ -20,6 +29,11 @@ export const Container = ({
   gridTemplateColumns,
   gridTemplateRows,
   gridGap,
+  // Size Props
+  height,
+  maxHeight,
+  width,
+  maxWidth,
   ...rest
 }: ContainerProps) => {
   console.log("padding", margin);
@@ -35,9 +49,16 @@ export const Container = ({
     gridGap,
   };
 
+  const sizeStyles = createSizeStyles({
+    height,
+    maxHeight,
+    width,
+    maxWidth,
+  });
+
   return (
     <article
-      style={{ ...spaceStyles, ...displayStyles }}
+      style={{ ...spaceStyles, ...displayStyles, ...sizeStyles }}
       className={clsx("container", className)}
       {...rest}
     >
