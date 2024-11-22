@@ -1,4 +1,5 @@
 export type SpaceValues =
+  | 0
   | 100
   | 200
   | 300

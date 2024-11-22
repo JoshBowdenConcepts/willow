@@ -90,6 +90,7 @@ span {
   --text-contrast-disabled: #999999;
 
   /* Spacing: */
+  --spacing-0: 0px;
   --spacing-100: 2px;
   --spacing-200: 4px;
   --spacing-300: 8px;

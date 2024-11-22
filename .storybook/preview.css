@@ -3,3 +3,11 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+.sbdocs-wrapper {
+  padding: 0 !important; /* Removes padding from the MDX wrapper */
+}
+
+.sbdocs {
+  padding: 0 !important; /* Removes padding from the inner container */
+}
