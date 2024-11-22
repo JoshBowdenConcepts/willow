@@ -1,4 +1,4 @@
-import{j as g}from"./jsx-runtime-OAISXtky.js";import{c as d}from"./clsx-B-dksMZM.js";const T=n=>Object.fromEntries(n.split(";").map(e=>e.trim()).filter(Boolean).map(e=>{const[a,l]=e.split(":").map(t=>t.trim());return a&&l?[a,l]:[]}).filter(Boolean)),w=({padding:n,margin:e})=>{const[a=100,l=a,t=a,i=l]=n??[100],u=n?`
+import{j as S}from"./jsx-runtime-OAISXtky.js";import{c as x}from"./clsx-B-dksMZM.js";const T=n=>Object.fromEntries(n.split(";").map(e=>e.trim()).filter(Boolean).map(e=>{const[a,l]=e.split(":").map(t=>t.trim());return a&&l?[a,l]:[]}).filter(Boolean)),$=({padding:n,margin:e})=>{const[a=100,l=a,t=a,i=l]=n??[100],u=n?`
     padding-top: var(--spacing-${a});
     padding-right: var(--spacing-${l});
     padding-bottom: var(--spacing-${t});
@@ -8,7 +8,7 @@ import{j as g}from"./jsx-runtime-OAISXtky.js";import{c as d}from"./clsx-B-dksMZM
     margin-right: var(--spacing-${r});
     margin-bottom: var(--spacing-${v});
     margin-left: var(--spacing-${s});
-  `:"";return{...T(u),...T(o)}},f=({children:n,className:e,padding:a=[500],margin:l,display:t,flexDirection:i,justifyContent:u,alignItems:m,gridTemplateColumns:r,gridTemplateRows:v,gridGap:s,...o})=>{console.log("padding",l);const p=w({padding:a,margin:l}),c={display:t,flexDirection:i,justifyContent:u,alignItems:m,gridTemplateColumns:r,gridTemplateRows:v,gridGap:s};return g.jsx("article",{style:{...p,...c},className:d("container",e),...o,children:n})};f.__docgenInfo={description:"",methods:[],displayName:"Container",props:{padding:{required:!1,tsType:{name:"union",raw:"[T] | [T, T] | [T, T, T] | [T, T, T, T]",elements:[{name:"tuple",raw:"[T]",elements:[{name:"union",raw:`| 0
+  `:"";return{...T(u),...T(o)}};function h({height:n,maxHeight:e,width:a,maxWidth:l}){return{...n?{height:n+"px"}:{},...e?{maxHeight:e+"px"}:{},...a?{width:a+"px"}:{},...l?{maxWidth:l+"px"}:{}}}const j=({children:n,className:e,padding:a=[0],margin:l,display:t,flexDirection:i,justifyContent:u,alignItems:m,gridTemplateColumns:r,gridTemplateRows:v,gridGap:s,height:o,maxHeight:p,width:c,maxWidth:g,...d})=>{console.log("padding",l);const w=$({padding:a,margin:l}),y={display:t,flexDirection:i,justifyContent:u,alignItems:m,gridTemplateColumns:r,gridTemplateRows:v,gridGap:s},f=h({height:o,maxHeight:p,width:c,maxWidth:g});return S.jsx("article",{style:{...w,...y,...f},className:x("container",e),...d,children:n})};j.__docgenInfo={description:"",methods:[],displayName:"Container",props:{padding:{required:!1,tsType:{name:"union",raw:"[T] | [T, T] | [T, T, T] | [T, T, T, T]",elements:[{name:"tuple",raw:"[T]",elements:[{name:"union",raw:`| 0
 | 100
 | 200
 | 300
@@ -128,7 +128,7 @@ import{j as g}from"./jsx-runtime-OAISXtky.js";import{c as d}from"./clsx-B-dksMZM
 | 900
 | 1000
 | 1100
-| 1200`,elements:[{name:"literal",value:"0"},{name:"literal",value:"100"},{name:"literal",value:"200"},{name:"literal",value:"300"},{name:"literal",value:"400"},{name:"literal",value:"500"},{name:"literal",value:"600"},{name:"literal",value:"700"},{name:"literal",value:"800"},{name:"literal",value:"900"},{name:"literal",value:"1000"},{name:"literal",value:"1100"},{name:"literal",value:"1200"}]}]}]},description:"",defaultValue:{value:"[500]",computed:!1}},margin:{required:!1,tsType:{name:"union",raw:"[T] | [T, T] | [T, T, T] | [T, T, T, T]",elements:[{name:"tuple",raw:"[T]",elements:[{name:"union",raw:`| 0
+| 1200`,elements:[{name:"literal",value:"0"},{name:"literal",value:"100"},{name:"literal",value:"200"},{name:"literal",value:"300"},{name:"literal",value:"400"},{name:"literal",value:"500"},{name:"literal",value:"600"},{name:"literal",value:"700"},{name:"literal",value:"800"},{name:"literal",value:"900"},{name:"literal",value:"1000"},{name:"literal",value:"1100"},{name:"literal",value:"1200"}]}]}]},description:"",defaultValue:{value:"[0]",computed:!1}},margin:{required:!1,tsType:{name:"union",raw:"[T] | [T, T] | [T, T, T] | [T, T, T, T]",elements:[{name:"tuple",raw:"[T]",elements:[{name:"union",raw:`| 0
 | 100
 | 200
 | 300
@@ -248,4 +248,4 @@ import{j as g}from"./jsx-runtime-OAISXtky.js";import{c as d}from"./clsx-B-dksMZM
 | 900
 | 1000
 | 1100
-| 1200`,elements:[{name:"literal",value:"0"},{name:"literal",value:"100"},{name:"literal",value:"200"},{name:"literal",value:"300"},{name:"literal",value:"400"},{name:"literal",value:"500"},{name:"literal",value:"600"},{name:"literal",value:"700"},{name:"literal",value:"800"},{name:"literal",value:"900"},{name:"literal",value:"1000"},{name:"literal",value:"1100"},{name:"literal",value:"1200"}]}]}]},description:""}}};export{f as C};
+| 1200`,elements:[{name:"literal",value:"0"},{name:"literal",value:"100"},{name:"literal",value:"200"},{name:"literal",value:"300"},{name:"literal",value:"400"},{name:"literal",value:"500"},{name:"literal",value:"600"},{name:"literal",value:"700"},{name:"literal",value:"800"},{name:"literal",value:"900"},{name:"literal",value:"1000"},{name:"literal",value:"1100"},{name:"literal",value:"1200"}]}]}]},description:""}}};export{j as C};
