@@ -15,50 +15,19 @@ span {
 
 /* Theme Tokens: */
 :root {
-  /* Spacing: */
-  --spacing-100: 2px;
-  --spacing-200: 4px;
-  --spacing-300: 8px;
-  --spacing-400: 12px;
-  --spacing-500: 16px;
-  --spacing-600: 24px;
-  --spacing-700: 32px;
-  --spacing-800: 40px;
-  --spacing-900: 48px;
-  --spacing-1000: 64px;
-  --spacing-1100: 80px;
-  --spacing-1200: 96px;
-
-  /* Shape: */
-  --border-radius-100: var(--spacing-300);
-  --border-radius-200: var(--spacing-400);
-  --border-radius-pill: 999em;
-
-  /* Typography */
-  --font-small: normal normal 500 12px / calc(4 / 3) "Inter", sans-serif; /* 16px line height */
-  --font-div: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
-  --font-strong: normal normal 700 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
-  --font-span: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
-  --font-em: italic normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
-  --font-p: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
-  --font-h6: normal normal 700 20px / calc(5 / 4) "Inter", sans-serif; /* 25px line height */
-  --font-h5: normal normal 700 25px / calc(6 / 5) "Inter", sans-serif; /* 30px line height */
-  --font-h4: normal normal 700 32px / calc(19 / 16) "Inter", sans-serif; /* 38px line height */
-  --font-h3: normal normal 700 40px / calc(6 / 5) "Inter", sans-serif; /* 48px line height */
-  --font-h2: normal normal 700 48px / calc(7 / 6) "Inter", sans-serif; /* 56px line height */
-  --font-h1: normal normal 700 60px / calc(6 / 5) "Inter", sans-serif; /* 72px line height */
-  --text-color: #222222;
-
   /* Colors: */
-  --brand-100: #cde0e3;
-  --brand-200: #adccd0;
-  --brand-300: #8fb8bc;
-  --brand-400: #73a3a9;
-  --brand-500: #5a8f95;
-  --brand-600: #457a80;
-  --brand-700: #33666c;
-  --brand-800: #265257;
-  --brand-900: #1d3e42;
+  --brand-0: #ffffff;
+  --brand-50: #fafafa;
+  --brand-100: #f5f5f5;
+  --brand-200: #e5e5e5;
+  --brand-300: #d4d4d4;
+  --brand-400: #a3a3a3;
+  --brand-500: #737373;
+  --brand-600: #525252;
+  --brand-700: #404040;
+  --brand-800: #262626;
+  --brand-900: #171717;
+  --brand-950: #0a0a0a;
 
   --neutral-100: #dcddde;
   --neutral-200: #c6c6c9;
@@ -113,10 +82,60 @@ span {
   --black: #000000;
   --white: #ffffff;
 
-  --text-base: #000000;
+  --text-base: var(--brand-950);
   --text-subtle: #222222;
   --text-disabled: #5f5f5f;
-  --text-contrast-base: #ffffff;
+  --text-contrast-base: var(--brand-50);
   --text-contrast-subtle: #e4e4e4;
   --text-contrast-disabled: #999999;
+
+  /* Spacing: */
+  --spacing-100: 2px;
+  --spacing-200: 4px;
+  --spacing-300: 8px;
+  --spacing-400: 12px;
+  --spacing-500: 16px;
+  --spacing-600: 24px;
+  --spacing-700: 32px;
+  --spacing-800: 40px;
+  --spacing-900: 48px;
+  --spacing-1000: 64px;
+  --spacing-1100: 80px;
+  --spacing-1200: 96px;
+
+  /* Shape: */
+  --border-radius-100: var(--spacing-300);
+  --border-radius-200: var(--spacing-400);
+  --border-radius-pill: 999em;
+
+  /* Typography */
+  --text-color: var(--brand-950);
+  --font-small: normal normal 500 12px / calc(4 / 3) "Inter", sans-serif; /* 16px line height */
+  --font-div: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
+  --font-strong: normal normal 700 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
+  --font-span: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
+  --font-em: italic normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
+  --font-p: normal normal 500 16px / calc(5 / 4) "Inter", sans-serif; /* 20px line height */
+  --font-h6: normal normal 700 20px / calc(5 / 4) "Inter", sans-serif; /* 25px line height */
+  --font-h5: normal normal 700 25px / calc(6 / 5) "Inter", sans-serif; /* 30px line height */
+  --font-h4: normal normal 700 32px / calc(19 / 16) "Inter", sans-serif; /* 38px line height */
+  --font-h3: normal normal 700 40px / calc(6 / 5) "Inter", sans-serif; /* 48px line height */
+  --font-h2: normal normal 700 48px / calc(7 / 6) "Inter", sans-serif; /* 56px line height */
+  --font-h1: normal normal 700 60px / calc(6 / 5) "Inter", sans-serif; /* 72px line height */
+}
+
+[data-colormode="dark"] {
+  /* Colors: */
+  --brand-950: #fafafa;
+  --brand-900: #f5f5f5;
+  --brand-800: #e5e5e5;
+  --brand-700: #d4d4d4;
+  --brand-600: #a3a3a3;
+  --brand-500: #737373;
+  --brand-400: #525252;
+  --brand-300: #404040;
+  --brand-200: #262626;
+  --brand-100: #171717;
+  --brand-50: #0a0a0a;
+  --brand-0: #000000;
 }

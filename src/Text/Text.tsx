@@ -1,4 +1,5 @@
 import React from "react";
+import { BrandColors } from "../types";
 
 export const TextTags = [
   "h1",
@@ -37,12 +38,23 @@ type TextTags = {
   variant?: (typeof TextTags)[number];
 } & RestrictedPolymorphism;
 
-type TextProps = TextTags & {};
+type TextProps = TextTags & {
+  color?: BrandColors | "inherit";
+};
 
-export const Text = ({ as: Component = "p", variant, ...rest }: TextProps) => {
+// NOTE: The omit then override is a bit annoying but it works
+export const Text = ({
+  as: Component = "p",
+  variant,
+  color = 950,
+  ...rest
+}: Omit<TextProps, "color"> & { color?: BrandColors | "inherit" }) => {
   return (
     <Component
-      style={{ font: `var(--font-${variant || Component})` }}
+      style={{
+        font: `var(--font-${variant || Component})`,
+        color: color === "inherit" ? "inherit" : `var(--brand-${color})`,
+      }}
       {...rest}
     />
   );

@@ -33,7 +33,9 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       {...rest}
     >
-      <Text as="span">{children}</Text>
+      <Text as="span" color="inherit">
+        {children}
+      </Text>
     </button>
   );
 };
