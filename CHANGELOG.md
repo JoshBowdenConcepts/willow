@@ -1,5 +1,11 @@
 # @jbconcepts/willow
 
+## 1.0.16
+
+### Patch Changes
+
+- 63ffe82: Updated Container, Button, and Theme. Created utils for adding spacing, size, and display.
+
 ## 1.0.15
 
 ### Patch Changes
