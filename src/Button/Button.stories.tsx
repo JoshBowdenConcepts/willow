@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { IconChevronUp } from "../svg/IocnChevronUp";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -42,4 +43,18 @@ export const DisabledVariants: Story = {
       </Button>
     </div>
   ),
+};
+
+export const StartIcon: Story = {
+  args: {
+    children: "Button",
+    StartIcon: <IconChevronUp />,
+  },
+};
+
+export const EndIcon: Story = {
+  args: {
+    children: "Button",
+    EndIcon: <IconChevronUp />,
+  },
 };

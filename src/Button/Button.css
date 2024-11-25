@@ -8,6 +8,11 @@
   font: var(--font-p);
   outline: 2px solid transparent;
   outline-offset: 2px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-300);
 }
 
 .btn:focus {
