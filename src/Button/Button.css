@@ -15,7 +15,19 @@
   gap: var(--spacing-300);
 }
 
-.btn:focus {
+.btn-icon-multi,
+.btn-icon-start,
+.btn-icon-end {
+  padding-left: var(--spacing-600);
+  padding-right: var(--spacing-600);
+}
+
+.btn-icon-only {
+  padding-left: var(--spacing-400);
+  padding-right: var(--spacing-400);
+}
+
+.btn-icon .btn:focus {
   outline-color: var(--brand-700);
 }
 

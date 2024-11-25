@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { IconChevronUp } from "../svg/IocnChevronUp";
+import { IconCalendar, IconChevronLeft, IconChevronRight } from "../svg";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -48,13 +48,29 @@ export const DisabledVariants: Story = {
 export const StartIcon: Story = {
   args: {
     children: "Button",
-    StartIcon: <IconChevronUp />,
+    StartIcon: <IconChevronLeft />,
   },
 };
 
 export const EndIcon: Story = {
   args: {
     children: "Button",
-    EndIcon: <IconChevronUp />,
+    EndIcon: <IconChevronRight />,
+  },
+};
+
+export const BothIcons: Story = {
+  args: {
+    children: "Button",
+    StartIcon: <IconCalendar />,
+    EndIcon: <IconChevronRight />,
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    children: "Button",
+    StartIcon: <IconCalendar />,
+    iconOnly: true,
   },
 };
