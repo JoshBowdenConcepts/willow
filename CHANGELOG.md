@@ -1,5 +1,13 @@
 # @jbconcepts/willow
 
+## 1.0.17
+
+### Patch Changes
+
+- 8abaff7: Added SVGs to Development Platform
+- 8abaff7: Added Icons to Button Component
+- 2bba8c9: Worked on styling the button component a bit more
+
 ## 1.0.16
 
 ### Patch Changes
