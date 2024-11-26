@@ -81,7 +81,7 @@ export const Button = <T extends SVGProps<SVGSVGElement>>({
     >
       {StartIcon}
       {!iconOnly && (
-        <Text as="span" color="inherit">
+        <Text as="span" variant="caption" color="inherit">
           {children}
         </Text>
       )}

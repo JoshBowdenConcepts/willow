@@ -16,6 +16,23 @@ export const TextTags = [
   "small",
 ] as const;
 
+// NOTE: These are expanded to deal with cases where a type isn't a element type
+export const TextTagsExpanded = [
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "p",
+  "span",
+  "div",
+  "strong",
+  "em",
+  "caption",
+  "small",
+] as const;
+
 type RestrictedPolymorphism =
   | (React.HTMLAttributes<HTMLHeadingElement> & { as?: "h1" })
   | (React.HTMLAttributes<HTMLHeadingElement> & { as?: "h2" })
@@ -35,7 +52,7 @@ type TextTags = {
    * Applies the underlying HTML element
    */
   as?: (typeof TextTags)[number];
-  variant?: (typeof TextTags)[number];
+  variant?: (typeof TextTagsExpanded)[number];
 } & RestrictedPolymorphism;
 
 type TextProps = TextTags & {

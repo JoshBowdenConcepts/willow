@@ -95,8 +95,8 @@ span {
   --spacing-1200: 96px;
 
   /* Shape: */
-  --border-radius-100: var(--spacing-300);
-  --border-radius-200: var(--spacing-400);
+  --border-radius-100: var(--spacing-200);
+  --border-radius-200: var(--spacing-300);
   --border-radius-pill: 999em;
 
   /* Typography */
@@ -105,6 +105,8 @@ span {
   font-size: var(--base-font-size);
   --text-color: var(--brand-950);
   --font-small: normal normal 500 calc(3 / 4 * 1rem) / 1rem "Inter", sans-serif; /* 12px font size, 16px line height */
+  --font-caption: normal normal 500 calc(7 / 8 * 1rem) / 1rem "Inter",
+    sans-serif; /* 12px font size, 16px line height */
   --font-div: normal normal 500 1rem / calc(5 / 4 * 1rem) "Inter", sans-serif; /* 16px font size, 20px line height */
   --font-strong: normal normal 700 1rem / calc(5 / 4 * 1rem) "Inter", sans-serif; /* 16px font size, 20px line height */
   --font-span: normal normal 500 1rem / calc(5 / 4 * 1rem) "Inter", sans-serif; /* 16px font size, 20px line height */

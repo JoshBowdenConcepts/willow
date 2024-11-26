@@ -1,5 +1,11 @@
 # @jbconcepts/willow
 
+## 1.0.18
+
+### Patch Changes
+
+- Created basic TextField component
+
 ## 1.0.17
 
 ### Patch Changes

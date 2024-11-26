@@ -2,9 +2,9 @@
   background-color: var(--brand-900);
   color: var(--text-contrast-base);
   padding: var(--spacing-400) var(--spacing-800);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
-  border-radius: var(--border-radius-pill);
+  border-radius: var(--border-radius-100);
   font: var(--font-p);
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -49,6 +49,8 @@
 .btn-secondary {
   background-color: var(--brand-50);
   border-color: var(--brand-600);
+  /* NOTE: These box shadows are basically inset borders */
+  box-shadow: inset 0 0px 0px 1px var(--brand-600);
   color: var(--brand-800);
 }
 
@@ -58,6 +60,7 @@
 
 .btn-secondary:hover {
   border-color: var(--brand-800);
+  box-shadow: inset 0 0px 0px 1px var(--brand-800);
   background-color: var(--brand-100);
   color: var(--brand-800);
 }
@@ -65,12 +68,14 @@
 .btn-secondary:active {
   background-color: var(--brand-0);
   border-color: var(--brand-950);
+  box-shadow: inset 0 0px 0px 1px var(--brand-950);
 }
 
 .btn-secondary:disabled {
   background-color: var(--brand-50);
   color: var(--brand-400);
   border-color: var(--brand-300);
+  box-shadow: inset 0 0px 0px 1px var(--brand-300);
 }
 
 /* Tertiary State */
