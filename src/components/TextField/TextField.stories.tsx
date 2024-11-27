@@ -2,7 +2,7 @@ import React from "react";
 import { TextField } from "./TextField";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { IconCalendar, IconChevronLeft, IconChevronRight } from "../svg";
+import { IconCalendar, IconChevronLeft, IconChevronRight } from "../../svg";
 import { Button } from "../Button";
 
 const meta: Meta<typeof TextField> = {

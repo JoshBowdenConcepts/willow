@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "./Button";
 import { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { IconCalendar, IconChevronLeft, IconChevronRight } from "../svg";
+import { IconCalendar, IconChevronLeft, IconChevronRight } from "../../svg";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",

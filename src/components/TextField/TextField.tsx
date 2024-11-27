@@ -1,5 +1,5 @@
 import React, { ChangeEvent, HTMLAttributes, useState } from "react";
-import { Text } from "../index";
+import { Text } from "../../index";
 
 import "./TextField.css";
 import clsx from "clsx";

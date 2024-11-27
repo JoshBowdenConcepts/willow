@@ -6,7 +6,7 @@ import {
   DisplayStyles,
   SizeProps,
   createSizeStyles,
-} from "../utils";
+} from "../../utils";
 
 import "./Container.css";
 

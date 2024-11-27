@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandColors } from "../types";
+import { BrandColors } from "../../types";
 
 export const TextTags = [
   "h1",
