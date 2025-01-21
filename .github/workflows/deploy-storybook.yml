@@ -21,11 +21,11 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # Step 4: Build Storybook
       - name: Build Storybook
-        run: npm run build-storybook
+        run: pnpm run build-storybook
 
       # Step 5: Set Git user identity (required for `gh-pages` deployment)
       - name: Set Git user identity
