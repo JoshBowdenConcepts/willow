@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["node", "jest"],
+    "paths": {
+      "*": ["./node_modules/*", "./node_modules/@types/*"]
+    }
+  },
+  "include": ["lib"]
+}

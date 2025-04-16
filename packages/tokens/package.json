@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "tokens",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && ts-node ./scripts/index.ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage --coverageReporters=text"
+  },
+  "keywords": [],
+  "author": "Josh Bowden",
+  "license": "ISC",
+  "packageManager": "pnpm@10.0.0",
+  "devDependencies": {
+    "@jest/types": "catalog:",
+    "@types/jest": "catalog:",
+    "@types/node": "catalog:",
+    "jest": "catalog:",
+    "ts-jest": "catalog:",
+    "ts-node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
