@@ -1,0 +1,4 @@
+.box_root {
+  padding: var(--box-padding);
+  margin: var(--box-margin);
+}

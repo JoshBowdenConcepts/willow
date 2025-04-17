@@ -1,6 +1,8 @@
 import { font } from "./font";
+import { space } from "./space";
 export const theme = {
   font,
+  space,
   color: {
     primary: {
       light: "red",
