@@ -1,5 +1,5 @@
 export const font = {
-  h1: "bold 3rem / 3.5rem 'Barlow', sans-serif",
+  h1: "600 2rem / 1.3 'Barlow', sans-serif",
   h2: "bold 2.5rem / 3rem 'Barlow', sans-serif",
   h3: "bold 2rem / 2.5rem 'Barlow', sans-serif",
   h4: "bold 1.75rem / 2.25rem 'Barlow', sans-serif",

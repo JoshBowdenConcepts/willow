@@ -1,4 +1,6 @@
 .text_root {
   font: var(--text-font);
   color: var(--text-color);
+  text-align: var(--text-align);
+  letter-spacing: -0.4px;
 }

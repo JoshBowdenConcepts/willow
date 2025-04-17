@@ -1,4 +1,5 @@
 export const space = {
+  0: "0px",
   100: "4px",
   200: "8px",
   300: "12px",
@@ -12,4 +13,5 @@ export const space = {
   1100: "44px",
   1200: "48px",
   1300: "56px",
+  1400: "72px",
 };

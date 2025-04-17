@@ -11,7 +11,7 @@ import {
   pickProps,
   oneThroughFourSpacing,
 } from "./boxUtils";
-// import { tokens } from "tokens";
+import { tokens } from "tokens";
 import styles from "./Box.module.css";
 
 /* eslint @typescript-eslint/no-empty-object-type: 0 */
@@ -35,7 +35,16 @@ export const Box = forwardRef(
     // Explicitly assert the default value
     const Element = (as || "div") as ElementType;
     const [
-      { gap, display, padding, margin, justifyContent, alignItems },
+      {
+        gap,
+        display,
+        padding,
+        margin,
+        justifyContent,
+        alignItems,
+        maxWidth,
+        flexDirection,
+      },
       remaining,
     ] = pickProps(props, rootStylePropsKeys);
 
@@ -51,6 +60,12 @@ export const Box = forwardRef(
     const tokenOverrides = {
       ["--box-padding"]: oneThroughFourSpacing(padding),
       ["--box-margin"]: oneThroughFourSpacing(margin),
+      ["--box-gap"]: gap ? `var(${tokens.space[gap]})` : 0,
+      ["--box-display"]: display ?? "block",
+      ["--box-justifyContent"]: justifyContent ?? "initial",
+      ["--box-alignItems"]: alignItems ?? "initial",
+      ["--box-maxWidth"]: maxWidth ?? "none",
+      ["--box-flexDirection"]: flexDirection ?? "column",
     } as CSSProperties;
 
     return (

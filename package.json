@@ -7,6 +7,7 @@
     "build:icons": "pnpm --filter icons build",
     "build:components": "pnpm --filter components build",
     "build": "pnpm -r build",
+    "build:deps": "pnpm -r --filter '!personal' build",
     "dev": "concurrently --kill-others \"pnpm watch:css\" \"pnpm storybook\"",
     "jbc": "pnpm --filter personal dev",
     "watch:css": "pnpm --filter components css",

@@ -1,4 +1,10 @@
 .box_root {
   padding: var(--box-padding);
   margin: var(--box-margin);
+  gap: var(--box-gap);
+  display: var(--box-display);
+  justify-content: var(--box-justifyContent);
+  align-items: var(--box-alignItems);
+  max-width: var(--box-maxWidth);
+  flex-direction: var(--box-flexDirection);
 }

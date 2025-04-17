@@ -17,11 +17,11 @@ function yearsSince(year: number): number {
   return currentYear - year;
 }
 
+export const yearsSinceStartingDev = yearsSince(2017);
+
 export const metadata: Metadata = {
   title: "Josh Bowden Concepts",
-  description: `Design System Architect with ${yearsSince(
-    2017
-  )} years experience building unique systems that simplify the lives of designers and engineers.`,
+  description: `Design System Architect with ${yearsSinceStartingDev} years experience building unique systems that simplify the lives of designers and engineers.`,
 };
 
 export default function RootLayout({

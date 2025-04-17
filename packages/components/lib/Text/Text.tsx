@@ -38,12 +38,14 @@ type TextTags = {
 
 export type TextProps = TextTags & {
   color?: "black" | "inherit";
+  align?: CSSProperties["textAlign"];
 };
 
 export const Text = ({
   as = "p",
   variant,
   color = "inherit",
+  align,
   ...rest
 }: TextProps) => {
   const Component = as;
@@ -51,6 +53,7 @@ export const Text = ({
   const tokenOverrides = {
     ["--text-font"]: `var(${tokens.font[variant ? variant : as]})`,
     ["--text-color"]: color === "black" ? "black" : "inherit",
+    ["--text-align"]: align ?? "left",
   } as CSSProperties;
 
   return (

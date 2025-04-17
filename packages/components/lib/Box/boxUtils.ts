@@ -11,6 +11,8 @@ const rootStylePropDefaults = {
   display: undefined,
   justifyContent: undefined,
   alignItems: undefined,
+  maxWidth: undefined,
+  flexDirection: undefined,
 } as const;
 
 type SpaceKey = keyof (typeof tokens)["space"];

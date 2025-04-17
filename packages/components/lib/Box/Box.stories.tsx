@@ -24,7 +24,7 @@ export const Playground: Story = {
 export const InternalPlayground: Story = {
   render: () => {
     return (
-      <Box padding={[100]} margin={[100]}>
+      <Box padding={[100]} margin={[100]} display="flex">
         Something
       </Box>
     );
