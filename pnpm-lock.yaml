@@ -86,22 +86,6 @@ importers:
         version: 5.8.3
 
   packages/components:
-    dependencies:
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
-      icons:
-        specifier: workspace:*
-        version: link:../icons
-      react:
-        specifier: 'catalog:'
-        version: 19.1.0
-      react-dom:
-        specifier: 'catalog:'
-        version: 19.1.0(react@19.1.0)
-      tokens:
-        specifier: workspace:*
-        version: link:../tokens
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^3
@@ -154,6 +138,12 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.1.1
         version: 3.1.1(@vitest/browser@3.1.1)(vitest@3.1.1)
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
+      icons:
+        specifier: workspace:*
+        version: link:../icons
       jest:
         specifier: 'catalog:'
         version: 29.7.0(@types/node@22.14.1)(ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3))
@@ -163,6 +153,12 @@ importers:
       playwright:
         specifier: ^1.51.1
         version: 1.51.1
+      react:
+        specifier: 'catalog:'
+        version: 19.1.0
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.1.0(react@19.1.0)
       rollup:
         specifier: ^4.40.0
         version: 4.40.0
@@ -175,6 +171,9 @@ importers:
       storybook:
         specifier: ^8.6.12
         version: 8.6.12(prettier@2.8.8)
+      tokens:
+        specifier: workspace:*
+        version: link:../tokens
       tslib:
         specifier: ^2.8.1
         version: 2.8.1

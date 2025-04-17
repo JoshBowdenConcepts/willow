@@ -17,18 +17,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "clsx": "catalog:",
-    "icons": "workspace:*",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "tokens": "workspace:*"
-  },
   "peerDependencies": {
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "clsx": "catalog:",
+    "icons": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tokens": "workspace:*",
     "@chromatic-com/storybook": "^3",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",

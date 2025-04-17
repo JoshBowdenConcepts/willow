@@ -30,7 +30,7 @@ export default [
       }),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
-    external: ["react", "react-dom"],
+    external: (id) => /^react/.test(id),
   },
   {
     input: "dist/types/index.d.ts",

@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes } from "react";
+import { CSSProperties } from "react";
 import { tokens } from "tokens";
 import styles from "./Text.module.css";
 
