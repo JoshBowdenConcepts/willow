@@ -21,7 +21,7 @@ const colorList = [
 ] as const;
 export type TextColor = (typeof colorList)[number];
 
-export type SVGComponentProps = React.SVGPops<SVGAElement> & {
+export type SVGComponentProps = React.SVGProps<SVGAElement> & {
   fontSize?: FontSize;
   color?: TextColor;
   titleAccess?: string;

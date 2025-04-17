@@ -7,6 +7,7 @@
     "build:icons": "pnpm --filter icons build",
     "build:components": "pnpm --filter components build",
     "build": "pnpm -r build",
+    "storybook": "pnpm --filter components storybook",
     "changeset": "changeset",
     "release": "changeset version"
   },

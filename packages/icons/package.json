@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@jest/types": "catalog:",
+    "@testing-library/react": "catalog:",
     "@types/jest": "catalog:",
     "@types/node": "catalog:",
     "fast-xml-parser": "catalog:",
