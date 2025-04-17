@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c && cp lib/theme.css dist/theme.css",
+    "build": "rollup -c",
     "css": "tcm -w -p 'lib/**/*.css'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

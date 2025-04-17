@@ -12,4 +12,5 @@ export const font = {
   em: "italic 1rem / 1.5rem 'Barlow', sans-serif",
   caption: "normal 0.875rem / 1.25rem 'Barlow', sans-serif",
   small: "normal 0.75rem / 1rem 'Barlow', sans-serif",
+  a: "normal 1rem / 1.5rem 'Barlow', sans-serif",
 };
