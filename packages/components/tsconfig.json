@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "lib": ["ES6", "DOM"],
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "rootDir": "lib",
+    "strict": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "types": [
+      "jest",
+      "@testing-library/jest-dom",
+      "@types/jest-image-snapshot"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMather": "\\.css$"
+        }
+      }
+    ]
+  },
+  "include": ["lib"],
+  "exclude": ["node_modules", "**/*.test.tsx", "**/*.stories.tsx"]
+}

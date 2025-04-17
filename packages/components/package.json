@@ -1,0 +1,54 @@
+{
+  "name": "components",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c && cp lib/theme.css dist/theme.css",
+    "css": "tcm -w -p 'lib/**/*.css'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clsx": "catalog:",
+    "icons": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/experimental-addon-test": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest-image-snapshot": "^6.4.0",
+    "@types/react": "^19.1.2",
+    "@vitest/browser": "^3.1.1",
+    "@vitest/coverage-v8": "^3.1.1",
+    "jest": "catalog:",
+    "jest-image-snapshot": "^6.4.0",
+    "playwright": "^1.51.1",
+    "rollup": "^4.40.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.6.12",
+    "typed-css-modules": "^0.9.1",
+    "vitest": "^3.1.1"
+  }
+}

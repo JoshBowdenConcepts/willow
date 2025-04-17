@@ -1,0 +1,15 @@
+export const font = {
+  h1: "bold 3rem / 3.5rem Inter, sans-serif",
+  h2: "bold 2.5rem / 3rem Inter, sans-serif",
+  h3: "bold 2rem / 2.5rem Inter, sans-serif",
+  h4: "bold 1.75rem / 2.25rem Inter, sans-serif",
+  h5: "bold 1.5rem / 2rem Inter, sans-serif",
+  h6: "bold 1.25rem / 1.75rem Inter, sans-serif",
+  p: "normal 1rem / 1.5rem Inter, sans-serif",
+  span: "normal 1rem / 1.5rem Inter, sans-serif",
+  div: "normal 1rem / 1.5rem Inter, sans-serif",
+  strong: "bold 1rem / 1.5rem Inter, sans-serif",
+  em: "italic 1rem / 1.5rem Inter, sans-serif",
+  caption: "normal 0.875rem / 1.25rem Inter, sans-serif",
+  small: "normal 0.75rem / 1rem Inter, sans-serif",
+};
