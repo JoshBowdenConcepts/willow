@@ -37,8 +37,9 @@
     "@storybook/react-vite": "^8.6.12",
     "@storybook/test": "^8.6.12",
     "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest": "catalog:",
     "@types/jest-image-snapshot": "^6.4.0",
-    "@types/react": "^19.1.2",
+    "@types/react": "catalog:",
     "@vitest/browser": "^3.1.1",
     "@vitest/coverage-v8": "^3.1.1",
     "jest": "catalog:",
@@ -48,6 +49,7 @@
     "rollup-plugin-dts": "^6.2.1",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.6.12",
+    "tslib": "^2.8.1",
     "typed-css-modules": "^0.9.1",
     "vitest": "^3.1.1"
   }

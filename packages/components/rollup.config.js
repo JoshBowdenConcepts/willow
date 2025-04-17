@@ -1,5 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup";
+import dts from "rollup-plugin-dts";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";

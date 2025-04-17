@@ -6,9 +6,9 @@
     "build:tokens": "pnpm --filter tokens build",
     "build:icons": "pnpm --filter icons build",
     "build:components": "pnpm --filter components build",
-    "build": "pnpm build:tokens && pnpm build:icons",
+    "build": "pnpm -r build",
     "changeset": "changeset",
-    "version": "changeset version"
+    "release": "changeset version"
   },
   "keywords": [],
   "author": "Josh Bowden",
