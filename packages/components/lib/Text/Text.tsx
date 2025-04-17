@@ -50,6 +50,7 @@ export const Text = ({
 
   const tokenOverrides = {
     ["--text-font"]: `var(${tokens.font[variant ? variant : as]})`,
+    ["--text-color"]: color === "black" ? "black" : "inherit",
   } as CSSProperties;
 
   return (
