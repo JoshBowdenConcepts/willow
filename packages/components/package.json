@@ -24,6 +24,10 @@
     "react-dom": "catalog:",
     "tokens": "workspace:*"
   },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
     "@rollup/plugin-commonjs": "^28.0.3",
