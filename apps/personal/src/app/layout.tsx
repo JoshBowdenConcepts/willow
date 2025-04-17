@@ -17,7 +17,7 @@ function yearsSince(year: number): number {
   return currentYear - year;
 }
 
-export const yearsSinceStartingDev = yearsSince(2017);
+export const yearsSinceStartingDev = yearsSince(2018);
 
 export const metadata: Metadata = {
   title: "Josh Bowden Concepts",

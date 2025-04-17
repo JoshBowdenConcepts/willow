@@ -7,12 +7,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Box padding={[0, 1200]} display="flex" justifyContent="center">
+        <Box padding={[0, 1200]} display="flex" alignItems="center">
           <Box
             maxWidth={"700px"}
             padding={[1400, 0]}
             display="flex"
-            justifyContent="center"
             alignItems="center"
           >
             <Text as="h1" align="center">
@@ -22,11 +21,13 @@ export default function Home() {
             </Text>
             <Box padding={[500, 0, 0, 0]} maxWidth={"650px"}>
               <Text as="p" align="center">
-                From setting up the right tools to forming robust processes and
-                teams, I love making complex systems easier and more efficient
-                to manage. Does your team need help? Some of the most well known
-                organizations out there trust the work I do, including Adobe,
-                Amazon, AT&T, Cisco, Microsoft and U.S. Government.
+                From infrastructure to governance, I am passionate about making
+                the complex dynamic between design and engineering easier and
+                more efficient. Does your company need help? My experience from
+                companies including <strong>GitHub</strong>,{" "}
+                <strong>American Express</strong>, and <strong>CarGurus</strong>{" "}
+                have taught me the skills to help no matter where you are in
+                your design system journey.
               </Text>
             </Box>
           </Box>
