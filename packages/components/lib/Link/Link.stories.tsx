@@ -12,7 +12,8 @@ const meta = {
   },
   argTypes: {
     variant: {
-      description: "Overwritten description",
+      description:
+        "The text tags you can apply to this component if the span tag isn't what you are looking for.",
       control: {
         type: "select",
       },
