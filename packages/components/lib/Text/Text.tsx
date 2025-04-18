@@ -15,6 +15,7 @@ export const TextTags = [
   "div",
   "strong",
   "em",
+  "caption",
   "small",
 ] as const;
 
@@ -30,6 +31,7 @@ type RestrictedPolymorphism =
   | (React.HTMLAttributes<HTMLDivElement> & { as?: "div" })
   | (React.HTMLAttributes<HTMLElement> & { as?: "strong" })
   | (React.HTMLAttributes<HTMLElement> & { as?: "em" })
+  | (React.HTMLAttributes<HTMLParagraphElement> & { as?: "caption" })
   | (React.HTMLAttributes<HTMLElement> & { as?: "small" });
 
 type TextTags = {

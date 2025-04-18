@@ -25,8 +25,9 @@ export const Link = ({
   variant,
   ...rest
 }: LinkProps) => {
+  const resolvedSize = type ? "caption" : "p";
   const tokenOverrides = {
-    ["--text-font"]: `var(${tokens.font[size ? size : "p"]})`,
+    ["--text-font"]: `var(${tokens.font[size ? size : resolvedSize]})`,
     ["--text-color"]: color
       ? `var(${tokens.color[color as ColorTokenType]})`
       : `var(${tokens.color.fgDefault})`,

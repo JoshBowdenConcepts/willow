@@ -21,17 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <Box as="body" maxWidth="80%" margin={[0, "auto"]}>
         <Box
           display="flex"
           justifyContent="space-between"
           flexDirection="row"
           alignItems="center"
-          maxWidth="80%"
-          margin={[300, "auto"]}
+          margin={[300, 0]}
         >
           <Box>
-            <Text>JoshBowdenConcepts</Text>
+            <Text variant="caption">JoshBowdenConcepts</Text>
           </Box>
           <Box display="flex" alignItems="center">
             <Box
@@ -59,7 +58,7 @@ export default function RootLayout({
           </Box>
         </Box>
         {children}
-      </body>
+      </Box>
     </html>
   );
 }
