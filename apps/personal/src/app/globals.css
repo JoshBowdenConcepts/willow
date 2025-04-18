@@ -6,12 +6,39 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --pattern-color: rgb(238, 238, 238);
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  overflow-y: scroll;
+  background: radial-gradient(var(--pattern-color) 3px, transparent 4px),
+    radial-gradient(var(--pattern-color) 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      var(--pattern-color) 75px,
+      var(--pattern-color) 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      var(--pattern-color) 76px,
+      var(--pattern-color) 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 
 * {

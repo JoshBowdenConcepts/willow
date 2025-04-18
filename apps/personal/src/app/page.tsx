@@ -1,10 +1,11 @@
+import NextLink from "next/link";
 import styles from "./page.module.css";
 import { Text, Box, Link } from "components";
 import { yearsSinceStartingDev } from "./layout";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       <main className={styles.main}>
         <Box padding={[0, 1200]} display="flex" alignItems="center">
           <Box
@@ -31,7 +32,7 @@ export default function Home() {
               </Text>
             </Box>
             <Box display="grid" gridAutoFlow="column" gap={200}>
-              <Link href="#" type="button">
+              <Link href="/about" type="button">
                 Let's Talk
               </Link>
               <Link href="#" type="button" variant="secondary">
