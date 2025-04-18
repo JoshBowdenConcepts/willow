@@ -1,6 +1,29 @@
 .link_root {
   position: relative;
+  text-decoration: none;
 }
+
+.link_root:hover > span {
+  color: var(--link-hover-color);
+}
+
+.link_root::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--link-color);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.link_root:hover::after {
+  background-color: var(--link-hover-color);
+}
+
+/* ------------------ */
 
 .link_button {
   padding: var(--space-300) var(--space-500);

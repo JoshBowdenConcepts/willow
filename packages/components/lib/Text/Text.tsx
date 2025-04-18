@@ -44,6 +44,26 @@ export type TextProps = TextTags & {
   align?: CSSProperties["textAlign"];
 };
 
+export const getTextStyleTokens = ({
+  as = "p",
+  variant,
+  color,
+  align,
+}: {
+  as: TextProps["as"];
+  color: TextProps["color"];
+  variant: TextProps["variant"];
+  align: TextProps["align"];
+}): CSSProperties => {
+  return {
+    ["--text-font"]: `var(${tokens.font[variant ?? as]})`,
+    ["--text-color"]: color
+      ? `var(${tokens.color[color as ColorTokenType]})`
+      : `var(${tokens.color.fgDefault})`,
+    ["--text-align"]: align ?? "left",
+  } as CSSProperties;
+};
+
 export const Text = ({
   as = "p",
   variant,
@@ -52,13 +72,7 @@ export const Text = ({
   ...rest
 }: TextProps) => {
   const Component = as;
-  const tokenOverrides = {
-    ["--text-font"]: `var(${tokens.font[variant ? variant : as]})`,
-    ["--text-color"]: color
-      ? `var(${tokens.color[color as ColorTokenType]})`
-      : `var(${tokens.color.fgDefault})`,
-    ["--text-align"]: align ?? "left",
-  } as CSSProperties;
+  const tokenOverrides = getTextStyleTokens({ as, variant, color, align });
 
   return (
     <Component className={styles.text_root} style={tokenOverrides} {...rest} />

@@ -11,7 +11,7 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    size: {
+    variant: {
       description: "Overwritten description",
       control: {
         type: "select",
@@ -32,35 +32,10 @@ export const Playground: Story = {
   },
 };
 
-export const AsNavItem: Story = {
-  args: {
-    type: "nav",
-    href: "#",
-    children: "As Nav Item",
-  },
-};
-
-export const AsButton: Story = {
-  args: {
-    type: "button",
-    href: "#",
-    children: "As Button",
-  },
-};
-
-export const AsSecondaryButton: Story = {
-  args: {
-    type: "button",
-    href: "#",
-    variant: "secondary",
-    children: "As Secondary Button",
-  },
-};
-
 export const AllTypes: Story = {
   render: () => {
     const components = TextTags.map((tag) => (
-      <Link size={tag as TextProps["as"]} href="#">
+      <Link variant={tag as TextProps["as"]} href="#">
         {tag}
       </Link>
     ));

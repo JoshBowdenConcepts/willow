@@ -1,49 +1,44 @@
-import { CSSProperties, AnchorHTMLAttributes } from "react";
-import { tokens } from "tokens";
-import { clsx } from "clsx";
+import { AnchorHTMLAttributes, CSSProperties } from "react";
 import textStyles from "../Text/Text.module.css";
 import styles from "./Link.module.css";
-import { TextTags } from "../Text";
-import { ColorTokenType, FGColorKeys } from "../helpers";
-
-export const LinkTags = ["a"] as const;
+import { getTextStyleTokens, Text, TextProps } from "../Text";
+import { tokens } from "tokens";
+import { cvar } from "../helpers";
 
 type LinkProps = {
-  size?: (typeof TextTags)[number]; // Use same variants from TextTags
-  color?: FGColorKeys;
-  type?: "button" | "nav";
-} & (
-  | { type: "button"; variant?: "primary" | "secondary" }
-  | { type?: "nav"; variant?: never }
-) &
+  color?: "default" | "secondary";
+} & Pick<TextProps, "variant"> &
   AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const Link = ({
-  size,
-  color = "fgInherit",
-  type,
+  color = "default",
   variant,
+  children,
   ...rest
 }: LinkProps) => {
-  const resolvedSize = type ? "caption" : "p";
+  const resolvedColor = color === "default" ? "fgPrimaryBase" : "fgDefault";
+  const resolvedHoverColor = color === "default" ? "fgPrimaryDark" : "fgDark";
+  const textTokenOverrides = getTextStyleTokens({
+    as: "span",
+    variant,
+    color: resolvedColor,
+    align: "left",
+  });
+
   const tokenOverrides = {
-    ["--text-font"]: `var(${tokens.font[size ? size : resolvedSize]})`,
-    ["--text-color"]: color
-      ? `var(${tokens.color[color as ColorTokenType]})`
-      : `var(${tokens.color.fgDefault})`,
+    ["--link-color"]: cvar(tokens.color[resolvedColor]),
+    ["--link-hover-color"]: cvar(tokens.color[resolvedHoverColor]),
   } as CSSProperties;
 
   return (
-    <a
-      className={clsx(
-        textStyles.text_root,
-        styles.link_root,
-        type === "button" && styles.link_button,
-        type === "nav" && styles.link_navType,
-        variant === "secondary" && styles.link_button_secondary
-      )}
-      style={tokenOverrides}
-      {...rest}
-    />
+    <a style={tokenOverrides} className={styles.link_root} {...rest}>
+      <Text
+        as="span"
+        style={textTokenOverrides}
+        className={textStyles.text_root}
+      >
+        {children}
+      </Text>
+    </a>
   );
 };
