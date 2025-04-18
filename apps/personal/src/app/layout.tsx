@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Box, Link, Text } from "components";
 
 function yearsSince(year: number): number {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          flexDirection="row"
+          alignItems="center"
+          maxWidth="80%"
+          margin={[300, "auto"]}
+        >
+          <Box>
+            <Text>JoshBowdenConcepts</Text>
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Box
+              padding={[300, 0]}
+              display="inline-grid"
+              gridAutoFlow="column"
+              gap={300}
+            >
+              <Link href="/" type="nav">
+                Home
+              </Link>
+              <Link href="/about" type="nav">
+                About
+              </Link>
+              <Link href="/services" type="nav">
+                Services
+              </Link>
+              <Link href="/blog" type="nav">
+                Writing
+              </Link>
+              <Link href="/contact" type="nav">
+                Contact
+              </Link>
+            </Box>
+          </Box>
+        </Box>
+        {children}
+      </body>
     </html>
   );
 }

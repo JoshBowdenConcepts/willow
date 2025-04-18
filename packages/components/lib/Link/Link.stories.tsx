@@ -32,6 +32,14 @@ export const Playground: Story = {
   },
 };
 
+export const AsNavItem: Story = {
+  args: {
+    type: "nav",
+    href: "#",
+    children: "As Nav Item",
+  },
+};
+
 export const AsButton: Story = {
   args: {
     type: "button",

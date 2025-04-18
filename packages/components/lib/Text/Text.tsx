@@ -1,6 +1,7 @@
 import { CSSProperties } from "react";
 import { tokens } from "tokens";
 import styles from "./Text.module.css";
+import { FGColorKeys, ColorTokenType } from "../helpers";
 
 export const TextTags = [
   "h1",
@@ -37,22 +38,23 @@ type TextTags = {
 } & RestrictedPolymorphism;
 
 export type TextProps = TextTags & {
-  color?: "black" | "inherit";
+  color?: FGColorKeys;
   align?: CSSProperties["textAlign"];
 };
 
 export const Text = ({
   as = "p",
   variant,
-  color = "inherit",
+  color = "fgDefault",
   align,
   ...rest
 }: TextProps) => {
   const Component = as;
-
   const tokenOverrides = {
     ["--text-font"]: `var(${tokens.font[variant ? variant : as]})`,
-    ["--text-color"]: color === "black" ? "black" : "inherit",
+    ["--text-color"]: color
+      ? `var(${tokens.color[color as ColorTokenType]})`
+      : `var(${tokens.color.fgDefault})`,
     ["--text-align"]: align ?? "left",
   } as CSSProperties;
 

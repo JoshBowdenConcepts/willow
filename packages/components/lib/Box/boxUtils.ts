@@ -16,7 +16,7 @@ const rootStylePropDefaults = {
   gridAutoFlow: undefined,
 } as const;
 
-type SpaceKey = keyof (typeof tokens)["space"];
+type SpaceKey = keyof (typeof tokens)["space"] | "auto";
 
 export type RootStyleProps = {
   [K in keyof typeof rootStylePropDefaults]?: K extends "padding" | "margin"
@@ -48,10 +48,12 @@ export function pickProps<T extends Record<string, any>, K extends keyof T>(
 }
 
 export function oneThroughFourSpacing(
-  spacing?: keyof typeof tokens.space | OneToFour<keyof typeof tokens.space>
+  spacing?: keyof typeof tokens.space | OneToFour<SpaceKey>
 ): string {
   if (Array.isArray(spacing)) {
-    return spacing.map((key) => `var(${tokens.space[key]})`).join(" ");
+    return spacing
+      .map((key) => (key === "auto" ? "auto" : `var(${tokens.space[key]})`))
+      .join(" ");
   } else if (spacing) {
     return `var(${tokens.space[spacing]})`;
   } else {

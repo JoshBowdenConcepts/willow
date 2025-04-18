@@ -1,46 +1,12 @@
 import { font } from "./font";
 import { space } from "./space";
 import { shape } from "./shape";
+import { color } from "./color";
 export const theme = {
   font,
   space,
   shape,
-  color: {
-    primary: {
-      light: "red",
-      dark: {
-        default: "darkred",
-        ".theFlag": "lightred",
-      },
-    },
-    secondary: {
-      default: "green",
-      ".newFlag": "darkgreen",
-    },
-    tertiary: {
-      default: "blue",
-      ".newFlag": {
-        light: "lightblue",
-        dark: "darkblue",
-      },
-    },
-    test: {
-      default: "purple",
-      dark: "darkpurple",
-      ".theFlag": {
-        light: "lightpurple",
-        dark: "mediumpurple",
-      },
-    },
-    another: {
-      default: "orange",
-      ".newFlag": "darkorange",
-    },
-    blah: {
-      default: "yellow",
-      "@800": "darkyellow",
-    },
-  },
+  color,
   size: {
     100: "1rem",
     200: "2rem",

@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import styles from "./page.module.css";
 import { Text, Box, Link } from "components";
 import { yearsSinceStartingDev } from "./layout";
@@ -21,7 +20,7 @@ export default function Home() {
               companies create consistent design through development.
             </Text>
             <Box maxWidth={"650px"}>
-              <Text as="p" align="center">
+              <Text as="p" align="center" color="fgSubtle">
                 From infrastructure to governance, I am passionate about making
                 the complex dynamic between design and engineering easier and
                 more efficient. Does your company need help? My experience from

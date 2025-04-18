@@ -1,5 +1,5 @@
 .link_root {
-  text-decoration: underline;
+  position: relative;
 }
 
 .link_button {
@@ -12,6 +12,41 @@
   background-color: #28262c;
   border: 1px solid #28262c;
   color: #fff;
+}
+
+.link_navType {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #e9503f;
+}
+
+.link_navType:focus {
+  outline: none;
+}
+
+.link_navType::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e9503f;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.link_navType:hover,
+.link_navType:focus {
+  color: #28262c;
+}
+
+.link_navType:hover::after,
+.link_navType:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 2px, 0);
 }
 
 .link_button:hover {
