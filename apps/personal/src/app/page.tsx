@@ -1,6 +1,5 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import { Text, Box } from "components";
+import { Text, Box, Link } from "components";
 import { yearsSinceStartingDev } from "./layout";
 
 export default function Home() {
@@ -13,13 +12,14 @@ export default function Home() {
             padding={[1400, 0]}
             display="flex"
             alignItems="center"
+            gap={600}
           >
             <Text as="h1" align="center">
               Hello 👋, I'm Josh Bowden, a Design Systems Architect with
               {" " + yearsSinceStartingDev} years of experience helping
               companies create consistent design through development.
             </Text>
-            <Box padding={[500, 0, 0, 0]} maxWidth={"650px"}>
+            <Box maxWidth={"650px"}>
               <Text as="p" align="center">
                 From infrastructure to governance, I am passionate about making
                 the complex dynamic between design and engineering easier and
@@ -29,6 +29,14 @@ export default function Home() {
                 have taught me the skills to help no matter where you are in
                 your design system journey.
               </Text>
+            </Box>
+            <Box display="grid" gridAutoFlow="column" gap={200}>
+              <Link href="#" type="button">
+                Let's Talk
+              </Link>
+              <Link href="#" type="button" variant="secondary">
+                Learn More
+              </Link>
             </Box>
           </Box>
         </Box>

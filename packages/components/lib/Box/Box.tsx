@@ -44,19 +44,11 @@ export const Box = forwardRef(
         alignItems,
         maxWidth,
         flexDirection,
+        gridAutoFlow,
       },
       remaining,
     ] = pickProps(props, rootStylePropsKeys);
 
-    // Handle styling the component
-    // const StyledElement = styled(Element)`
-    //   ${padding && `padding: ${oneThroughFourSpacing(padding)}`};
-    //   ${margin && `margin: ${oneThroughFourSpacing(margin)}`};
-    //   ${gap && `gap: var(${tokens.space[gap]})`};
-    //   ${display && `display: ${display}`};
-    //   ${justifyContent && `justifyContent: ${justifyContent}`};
-    //   ${alignItems && `alignItems: ${alignItems}`};
-    // `;
     const tokenOverrides = {
       ["--box-padding"]: oneThroughFourSpacing(padding),
       ["--box-margin"]: oneThroughFourSpacing(margin),
@@ -66,6 +58,7 @@ export const Box = forwardRef(
       ["--box-alignItems"]: alignItems ?? "initial",
       ["--box-maxWidth"]: maxWidth ?? "none",
       ["--box-flexDirection"]: flexDirection ?? "column",
+      ["--box-gridAutoFlow"]: gridAutoFlow ?? "row",
     } as CSSProperties;
 
     return (

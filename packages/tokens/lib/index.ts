@@ -1,8 +1,10 @@
 import { font } from "./font";
 import { space } from "./space";
+import { shape } from "./shape";
 export const theme = {
   font,
   space,
+  shape,
   color: {
     primary: {
       light: "red",

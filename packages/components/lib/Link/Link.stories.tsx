@@ -10,6 +10,15 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    size: {
+      description: "Overwritten description",
+      control: {
+        type: "select",
+      },
+      options: TextTags,
+    },
+  },
 } satisfies Meta<typeof Link>;
 
 export default meta;
@@ -23,10 +32,27 @@ export const Playground: Story = {
   },
 };
 
+export const AsButton: Story = {
+  args: {
+    type: "button",
+    href: "#",
+    children: "As Button",
+  },
+};
+
+export const AsSecondaryButton: Story = {
+  args: {
+    type: "button",
+    href: "#",
+    variant: "secondary",
+    children: "As Secondary Button",
+  },
+};
+
 export const AllTypes: Story = {
   render: () => {
     const components = TextTags.map((tag) => (
-      <Link variant={tag as TextProps["as"]} href="#">
+      <Link size={tag as TextProps["as"]} href="#">
         {tag}
       </Link>
     ));

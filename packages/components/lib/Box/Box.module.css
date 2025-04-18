@@ -7,4 +7,5 @@
   align-items: var(--box-alignItems);
   max-width: var(--box-maxWidth);
   flex-direction: var(--box-flexDirection);
+  grid-auto-flow: var(--box-gridAutoFlow);
 }

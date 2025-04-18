@@ -13,6 +13,7 @@ const rootStylePropDefaults = {
   alignItems: undefined,
   maxWidth: undefined,
   flexDirection: undefined,
+  gridAutoFlow: undefined,
 } as const;
 
 type SpaceKey = keyof (typeof tokens)["space"];
