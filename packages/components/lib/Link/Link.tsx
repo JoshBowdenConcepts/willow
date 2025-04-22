@@ -4,9 +4,11 @@ import styles from "./Link.module.css";
 import { getTextStyleTokens, Text, TextProps } from "../Text";
 import { tokens } from "tokens";
 import { cvar } from "../helpers";
+import { clsx } from "clsx";
 
-type LinkProps = {
+export type LinkProps = {
   color?: "default" | "secondary";
+  className?: string;
 } & Pick<TextProps, "variant"> &
   AnchorHTMLAttributes<HTMLAnchorElement>;
 
@@ -14,6 +16,7 @@ export const Link = ({
   color = "default",
   variant,
   children,
+  className,
   ...rest
 }: LinkProps) => {
   const resolvedColor = color === "default" ? "fgPrimaryBase" : "fgDefault";
@@ -31,7 +34,11 @@ export const Link = ({
   } as CSSProperties;
 
   return (
-    <a style={tokenOverrides} className={styles.link_root} {...rest}>
+    <a
+      style={tokenOverrides}
+      className={clsx(styles.link_root, className)}
+      {...rest}
+    >
       <Text
         as="span"
         style={textTokenOverrides}

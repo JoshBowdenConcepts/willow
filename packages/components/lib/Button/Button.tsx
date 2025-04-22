@@ -1,4 +1,6 @@
 import React from "react";
+import { clsx } from "clsx";
+import { button_root } from "./Button.module.css";
 
 type BaseProps = {
   children?: React.ReactNode;
@@ -21,7 +23,7 @@ export const Button = (props: ButtonProps) => {
   if (as === "a") {
     const { children, variant, className, ...rest } = props as AnchorTagProps;
     return (
-      <a className={className} {...rest}>
+      <a className={clsx(className, button_root)} {...rest}>
         {children}
       </a>
     );
@@ -29,7 +31,7 @@ export const Button = (props: ButtonProps) => {
 
   const { children, variant, className, ...rest } = props as ButtonTagProps;
   return (
-    <button className={className} {...rest}>
+    <button className={clsx(className, button_root)} {...rest}>
       {children}
     </button>
   );

@@ -12,8 +12,11 @@ const meta = {
   argTypes: {
     as: {
       control: "radio",
-      options: ["a", "button"],
+      options: ["button", "a"],
     },
+  },
+  args: {
+    as: "button",
   },
 } satisfies Meta<typeof Button>;
 
@@ -23,6 +26,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Playground: Story = {
   args: {
-    children: "Text",
+    children: "Button Text",
+  },
+};
+
+export const AsLink: Story = {
+  render: () => {
+    return (
+      <Button as="a" href="#">
+        Link Text
+      </Button>
+    );
   },
 };
