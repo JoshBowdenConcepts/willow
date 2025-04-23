@@ -27,7 +27,8 @@ const files = fs.readdirSync(assetsDir).filter((f) => f.endsWith('.svg'))
 const generateComponent = (name: string, svgObject: any) => {
 	delete svgObject.width
 	delete svgObject.height
-	svgObject['aria-hidden'] = '{titleAccess ? "false" : "true"}'
+	delete svgObject.fill
+	// svgObject['aria-hidden'] = '{titleAccess ? "false" : "true"}'
 
 	let jsx = builder.build({ svg: svgObject })
 	jsx = jsx
@@ -45,10 +46,11 @@ const generateComponent = (name: string, svgObject: any) => {
 import { IconProps } from './types/iconTypes';
 import { tokens } from 'tokens';
 
-export const ${name} = ({ titleAccess, size = 200, style, ...rest }: IconProps) => {
+export const ${name} = ({ titleAccess, size = 200, color = 'currentColor', style, ...rest }: IconProps) => {
   const computedStyle = {
     height: \`var(\${tokens.component.icon.size[size]})\`,
     width: \`var(\${tokens.component.icon.size[size]})\`,
+	fill: color === 'currentColor' ? 'currentColor' : \`var(\${tokens.color[color]})\`,
     ...style,
   };
 

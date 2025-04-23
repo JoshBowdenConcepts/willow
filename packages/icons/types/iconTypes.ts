@@ -11,4 +11,5 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 	titleAccess?: string
 	size?: keyof typeof tokens.component.icon.size
 	style?: CSSProperties
+	color?: FGColorKeys | 'currentColor'
 }
