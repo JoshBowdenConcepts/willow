@@ -78,7 +78,7 @@ fs.readdir(svgDirectory, (err, files) => {
 
         const reactComponent = `// This file is generated from the icons directory
 import React from 'react'
-import { SVGComponentProps, iconSize, iconColor } from './helpers
+import { SVGComponentProps, iconSize, iconColor } from './helpers'
 
 export const ${componentName} = ({fontSize = 'default', color, htmlColor = 'currentColor', titleAccess, className, ...props}: SVGComponentProps) => {
     return (

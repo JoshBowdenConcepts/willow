@@ -9,6 +9,7 @@
   border: 1px solid #28262c;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
 }
 
 .button_root:hover {

@@ -1,4 +1,6 @@
-type ThemeValue = string | { key?: string; default?: any; [key: string]: any };
+type ThemeValue =
+  | string
+  | { key?: string; default?: string | number; [key: string]: string | number };
 export type Theme = Record<string, Record<string, ThemeValue>>;
 
 export interface Token {

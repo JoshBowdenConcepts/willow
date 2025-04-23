@@ -1,6 +1,12 @@
 import { tokens } from "tokens";
 import React from "react";
 
+type FGKeys<T> = {
+  [K in keyof T]: K extends `fg${string}` ? K : never;
+}[keyof T];
+
+export type FGColorKeys = FGKeys<typeof tokens.color>;
+
 const fontSizeList = [
   "inherit",
   "small",
@@ -10,20 +16,9 @@ const fontSizeList = [
 ] as const;
 export type FontSize = (typeof fontSizeList)[number];
 
-const colorList = [
-  "default",
-  "inherit",
-  "primary",
-  "secondary",
-  "action",
-  "error",
-  "disabled",
-] as const;
-export type TextColor = (typeof colorList)[number];
-
 export type SVGComponentProps = React.SVGProps<SVGAElement> & {
   fontSize?: FontSize;
-  color?: TextColor;
+  color?: FGColorKeys;
   titleAccess?: string;
   htmlColor?: string;
 };
@@ -36,12 +31,4 @@ export const iconSize: Record<FontSize, string> = {
   large: tokens.size.icon[300],
 };
 
-export const iconColor: Record<TextColor, string> = {
-  default: "currentColor",
-  inherit: "inherit",
-  primary: tokens.color.primary,
-  secondary: tokens.color.secondary,
-  action: tokens.color.another,
-  error: tokens.color.error,
-  disabled: tokens.color.disabled,
-};
+export const iconColor = tokens.color;

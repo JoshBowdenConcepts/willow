@@ -8,8 +8,9 @@
     "sourceMap": true,
     "types": ["node", "jest"],
     "paths": {
-      "*": ["./node_modules/*", "./node_modules/@types/*"]
-    }
+      "*": ["./node_modules", "./node_modules/@types/*"]
+    },
+    "moduleResolution": "node"
   },
-  "include": ["lib"]
+  "include": ["lib", "scripts"]
 }
