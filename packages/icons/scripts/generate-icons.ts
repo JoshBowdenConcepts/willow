@@ -2,14 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import { XMLParser, XMLBuilder } from 'fast-xml-parser'
 
-const assetsDir = path.join(__dirname, '..', 'lib', 'assets')
-const distDir = path.join(__dirname, '..', 'dist')
-
-const toPascalCase = (str: string) =>
-	str
-		.replace(/[-_](.)/g, (_, char) => char.toUpperCase())
-		.replace(/^\w/, (c) => c.toUpperCase())
-
 const parser = new XMLParser({
 	ignoreAttributes: false,
 	attributeNamePrefix: '',
@@ -20,15 +12,14 @@ const builder = new XMLBuilder({
 	format: true,
 })
 
-fs.mkdirSync(distDir, { recursive: true })
+export const toPascalCase = (str: string) =>
+	str
+		.replace(/[-_](.)/g, (_, char) => char.toUpperCase())
+		.replace(/^\w/, (c) => c.toUpperCase())
 
-const files = fs.readdirSync(assetsDir).filter((f) => f.endsWith('.svg'))
-
-const generateComponent = (name: string, svgObject: any) => {
+export const generateComponent = (name: string, svgObject: any) => {
 	delete svgObject.width
 	delete svgObject.height
-	delete svgObject.fill
-	// svgObject['aria-hidden'] = '{titleAccess ? "false" : "true"}'
 
 	let jsx = builder.build({ svg: svgObject })
 	jsx = jsx
@@ -39,7 +30,7 @@ const generateComponent = (name: string, svgObject: any) => {
 		)
 		.replace(
 			'</svg>',
-			`{titleAccess && <title>{titleAccess}</title>}</svg>`,
+			`{titleAccess && <title>{titleAccess}</title>}\n    </svg>`,
 		)
 
 	return `import React from 'react';
@@ -50,7 +41,7 @@ export const ${name} = ({ titleAccess, size = 200, color = 'currentColor', style
   const computedStyle = {
     height: \`var(\${tokens.component.icon.size[size]})\`,
     width: \`var(\${tokens.component.icon.size[size]})\`,
-	fill: color === 'currentColor' ? 'currentColor' : \`var(\${tokens.color[color]})\`,
+    color: color === 'currentColor' ? 'currentColor' : \`var(\${tokens.color[color]})\`,
     ...style,
   };
 
@@ -61,23 +52,24 @@ export const ${name} = ({ titleAccess, size = 200, color = 'currentColor', style
 `
 }
 
-const indexExports: string[] = []
+export const processFiles = (assetsDir: string, distDir: string) => {
+	fs.mkdirSync(distDir, { recursive: true })
+	const files = fs.readdirSync(assetsDir).filter((f) => f.endsWith('.svg'))
+	const indexExports: string[] = []
 
-for (const file of files) {
-	const raw = fs.readFileSync(path.join(assetsDir, file), 'utf-8')
-	const parsed = parser.parse(raw)
-	const name = toPascalCase(file.replace('.svg', '')) + 'Icon'
-	const component = generateComponent(name, parsed.svg)
-	const outFile = path.join(distDir, `${name}.tsx`)
+	for (const file of files) {
+		const raw = fs.readFileSync(path.join(assetsDir, file), 'utf-8')
+		const parsed = parser.parse(raw)
+		const name = toPascalCase(file.replace('.svg', '')) + 'Icon'
+		const component = generateComponent(name, parsed.svg)
+		fs.writeFileSync(path.join(distDir, `${name}.tsx`), component, 'utf-8')
+		indexExports.push(`export { ${name} } from './${name}';`)
+	}
 
-	fs.writeFileSync(outFile, component, 'utf-8')
-	indexExports.push(`export { ${name} } from './${name}';`)
+	fs.writeFileSync(
+		path.join(distDir, 'index.ts'),
+		indexExports.join('\n'),
+		'utf-8',
+	)
+	return files.length
 }
-
-fs.writeFileSync(
-	path.join(distDir, 'index.ts'),
-	indexExports.join('\n'),
-	'utf-8',
-)
-
-console.log(`✅ Generated ${files.length} icons in dist/`)

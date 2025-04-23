@@ -9,7 +9,7 @@
 	],
 	"scripts": {
 		"clean": "rm -rf dist",
-		"build": "pnpm clean && ts-node ./scripts/generate-icons.ts && pnpm cp:types",
+		"build": "pnpm clean && ts-node ./scripts/index.ts && pnpm cp:types",
 		"cp:types": "cp -r ./types/ ./dist/types",
 		"test": "jest",
 		"test:coverage": "jest --coverage --coverageReporters=text"
