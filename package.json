@@ -1,31 +1,30 @@
 {
-  "private": true,
-  "name": "willow",
-  "description": "",
-  "scripts": {
-    "build:tokens": "pnpm --filter tokens build",
-    "build:icons": "pnpm --filter icons build",
-    "build:components": "pnpm --filter components build",
-    "build": "pnpm -r build",
-    "build:deps": "pnpm -r --filter '!personal' build",
-    "test:tokens": "pnpm --filter tokens test",
-    "test:icons": "pnpm --filter icons test",
-    "test:components": "pnpm --filter components test",
-    "test": "pnpm -r test",
-    "dev": "concurrently --kill-others \"pnpm watch:css\" \"pnpm storybook\"",
-    "jbc": "pnpm --filter personal dev",
-    "watch:css": "pnpm --filter components css",
-    "storybook": "pnpm --filter components storybook",
-    "changeset": "changeset",
-    "release": "changeset version"
-  },
-  "keywords": [],
-  "author": "Josh Bowden",
-  "license": "None",
-  "repository": "https://github.com/JoshBowdenConcepts/willow.git",
-  "packageManager": "pnpm@10.0.0",
-  "devDependencies": {
-    "@changesets/cli": "^2.29.1",
-    "concurrently": "^9.1.2"
-  }
+	"private": true,
+	"name": "willow",
+	"description": "",
+	"scripts": {
+		"build:tokens": "pnpm --filter tokens build",
+		"build:icons": "pnpm --filter icons build",
+		"build:components": "pnpm --filter components build",
+		"build": "pnpm -r build",
+		"build:deps": "pnpm -r --filter '!personal' build",
+		"test:tokens": "pnpm --filter tokens test",
+		"test:icons": "pnpm --filter icons test",
+		"test:components": "pnpm --filter components test",
+		"test": "pnpm -r test",
+		"dev": "concurrently --kill-others \"pnpm watch:css\" \"pnpm storybook\"",
+		"jbc": "pnpm build:deps && pnpm --filter personal dev",
+		"watch:css": "pnpm --filter components css",
+		"storybook": "pnpm --filter components storybook",
+		"changeset": "changeset"
+	},
+	"keywords": [],
+	"author": "Josh Bowden",
+	"license": "None",
+	"repository": "https://github.com/JoshBowdenConcepts/willow.git",
+	"packageManager": "pnpm@10.0.0",
+	"devDependencies": {
+		"@changesets/cli": "^2.29.1",
+		"concurrently": "^9.1.2"
+	}
 }
