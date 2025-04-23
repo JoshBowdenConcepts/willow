@@ -2,6 +2,7 @@
 	"private": true,
 	"name": "willow",
 	"description": "",
+	"type": "module",
 	"scripts": {
 		"build:tokens": "pnpm --filter tokens build",
 		"build:icons": "pnpm --filter icons build",
@@ -16,7 +17,9 @@
 		"jbc": "pnpm build:deps && pnpm --filter personal dev",
 		"watch:css": "pnpm --filter components css",
 		"storybook": "pnpm --filter components storybook",
-		"changeset": "changeset"
+		"changeset": "changeset",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix ."
 	},
 	"keywords": [],
 	"author": "Josh Bowden",
@@ -25,6 +28,13 @@
 	"packageManager": "pnpm@10.0.0",
 	"devDependencies": {
 		"@changesets/cli": "^2.29.1",
-		"concurrently": "^9.1.2"
+		"@eslint/js": "^9.25.1",
+		"@typescript-eslint/eslint-plugin": "^8.31.0",
+		"@typescript-eslint/parser": "^8.31.0",
+		"concurrently": "^9.1.2",
+		"eslint": "^9.25.1",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"typescript-eslint": "^8.31.0"
 	}
 }

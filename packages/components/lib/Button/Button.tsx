@@ -4,7 +4,7 @@ import styles from './Button.module.css'
 
 type BaseProps = {
 	children?: React.ReactNode
-	variant?: 'primary' | 'secondary' | 'outline' | 'link'
+	// variant?: 'primary' | 'secondary' | 'outline' | 'link'
 }
 
 type ButtonTagProps = BaseProps & {
@@ -21,7 +21,7 @@ export const Button = (props: ButtonProps) => {
 	const { as = 'button' } = props
 
 	if (as === 'a') {
-		const { children, variant, className, ...rest } =
+		const { children, className, ...rest } =
 			props as AnchorTagProps
 		return (
 			<a className={clsx(className, styles.button_root)} {...rest}>
@@ -30,7 +30,7 @@ export const Button = (props: ButtonProps) => {
 		)
 	}
 
-	const { children, variant, className, ...rest } = props as ButtonTagProps
+	const { children, className, ...rest } = props as ButtonTagProps
 	return (
 		<button className={clsx(className, styles.button_root)} {...rest}>
 			{children}

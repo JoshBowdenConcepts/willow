@@ -12,12 +12,19 @@ const builder = new XMLBuilder({
 	format: true,
 })
 
+const raw = `<svg width="100" height="100"><circle cx="50" cy="50" r="40" stroke="green"/></svg>`
+// Ignoring eslint for help with typing here
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const example = parser.parse(raw)
+
+type SvgParsed = typeof example
+
 export const toPascalCase = (str: string) =>
 	str
 		.replace(/[-_](.)/g, (_, char) => char.toUpperCase())
 		.replace(/^\w/, (c) => c.toUpperCase())
 
-export const generateComponent = (name: string, svgObject: any) => {
+export const generateComponent = (name: string, svgObject: SvgParsed) => {
 	delete svgObject.width
 	delete svgObject.height
 

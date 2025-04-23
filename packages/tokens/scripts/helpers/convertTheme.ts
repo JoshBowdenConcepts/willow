@@ -11,7 +11,7 @@ export function convertTheme(theme: Object): ConvertedTheme {
 	const result: ConvertedTheme = []
 
 	function traverse(
-		obj: any,
+		obj: Object,
 		qualifiers: Qualifiers,
 		levels: string[] = [],
 		tokens: ConvertedTheme,
