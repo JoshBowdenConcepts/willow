@@ -42,7 +42,7 @@ const generateComponent = (name: string, svgObject: any) => {
 		)
 
 	return `import React from 'react';
-import { IconProps } from '../types/iconTypes';
+import { IconProps } from './types/iconTypes';
 import { tokens } from 'tokens';
 
 export const ${name} = ({ titleAccess, size = 200, style, ...rest }: IconProps) => {
