@@ -1,35 +1,36 @@
 {
-  "name": "icons",
-  "version": "0.0.1",
-  "description": "",
-  "main": "dist/index.ts",
-  "module": "dist/index.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "clean": "rm -rf dist",
-    "build": "pnpm clean && ts-node ./scripts/index.ts && pnpm cp:helpers",
-    "cp:helpers": "cp ./lib/helpers/helpers.ts ./dist/",
-    "test": "jest",
-    "test:coverage": "jest --coverage --coverageReporters=text"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@jest/types": "catalog:",
-    "@testing-library/react": "catalog:",
-    "@types/jest": "catalog:",
-    "@types/node": "catalog:",
-    "fast-xml-parser": "catalog:",
-    "jest": "catalog:",
-    "tokens": "workspace:*",
-    "ts-jest": "catalog:",
-    "ts-node": "catalog:",
-    "typescript": "catalog:"
-  },
-  "peerDependencies": {
-    "react": "catalog:"
-  }
+	"name": "icons",
+	"version": "0.0.1",
+	"description": "",
+	"main": "dist/index.ts",
+	"module": "dist/index.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "pnpm clean && ts-node ./scripts/generate-icons.ts",
+		"cp:helpers": "cp ./lib/helpers/helpers.ts ./dist/",
+		"test": "jest",
+		"test:coverage": "jest --coverage --coverageReporters=text"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@jest/types": "catalog:",
+		"@testing-library/react": "catalog:",
+		"@types/jest": "catalog:",
+		"@types/node": "catalog:",
+		"fast-xml-parser": "catalog:",
+		"jest": "catalog:",
+		"tokens": "workspace:*",
+		"ts-jest": "catalog:",
+		"ts-node": "catalog:",
+		"typescript": "catalog:"
+	},
+	"peerDependencies": {
+		"@types/react": "catalog:",
+		"react": "catalog:"
+	}
 }

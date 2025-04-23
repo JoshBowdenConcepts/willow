@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"jsx": "react-jsx", // or "react" if using React 17 or earlier
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"types": ["react"], // 👈 important
+		"lib": ["dom", "esnext"]
+	},
+	"include": ["dist"] // or wherever your main TS files live
+}

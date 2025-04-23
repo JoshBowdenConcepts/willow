@@ -1,23 +1,24 @@
 {
-  "name": "personal",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "next": "15.3.0",
-    "components": "workspace:*"
-  },
-  "devDependencies": {
-    "typescript": "catalog:",
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:"
-  }
+	"name": "personal",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"next": "15.3.0",
+		"components": "workspace:*",
+		"icons": "workspace:*"
+	},
+	"devDependencies": {
+		"typescript": "catalog:",
+		"@types/node": "catalog:",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:"
+	}
 }

@@ -65,6 +65,9 @@ importers:
       components:
         specifier: workspace:*
         version: link:../../packages/components
+      icons:
+        specifier: workspace:*
+        version: link:../../packages/icons
       next:
         specifier: 15.3.0
         version: 15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -189,6 +192,9 @@ importers:
 
   packages/icons:
     dependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.1.2
       react:
         specifier: 'catalog:'
         version: 19.1.0
@@ -235,6 +241,12 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.14.1
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.1.2
+      '@types/react-dom':
+        specifier: 'catalog:'
+        version: 19.1.2(@types/react@19.1.2)
       jest:
         specifier: 'catalog:'
         version: 29.7.0(@types/node@22.14.1)(ts-node@10.9.2(@types/node@22.14.1)(typescript@5.8.3))
