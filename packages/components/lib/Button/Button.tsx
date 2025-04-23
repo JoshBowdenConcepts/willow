@@ -21,8 +21,7 @@ export const Button = (props: ButtonProps) => {
 	const { as = 'button' } = props
 
 	if (as === 'a') {
-		const { children, className, ...rest } =
-			props as AnchorTagProps
+		const { children, className, ...rest } = props as AnchorTagProps
 		return (
 			<a className={clsx(className, styles.button_root)} {...rest}>
 				{children}

@@ -22,8 +22,8 @@ export type RootStyleProps = {
 	[K in keyof typeof rootStylePropDefaults]?: K extends 'padding' | 'margin'
 		? SpaceKey | OneToFour<SpaceKey>
 		: K extends 'gap'
-		? SpaceKey
-		: CSSProperties[K]
+			? SpaceKey
+			: CSSProperties[K]
 }
 
 export const rootStylePropsKeys = Object.keys(
