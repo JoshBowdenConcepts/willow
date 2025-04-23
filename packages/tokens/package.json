@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "pnpm clean && ts-node ./scripts/index.ts",
-    "test": "jest",
+    "test": "jest --coverageReporters=text",
     "test:coverage": "jest --coverage --coverageReporters=text"
   },
   "keywords": [],
