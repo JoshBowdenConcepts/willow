@@ -15,7 +15,7 @@ export default function Home() {
 						alignItems="center"
 						gap={600}
 					>
-						<ChevronLeftIcon size={200} color="fgPrimaryBase" />
+						<ChevronLeftIcon size={200} className="" />
 						<Text as="h1" align="center">
 							Hello 👋, I'm Josh Bowden, a Design Systems
 							Architect with

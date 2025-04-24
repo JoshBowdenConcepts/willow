@@ -24,11 +24,44 @@ export const toPascalCase = (str: string) =>
 		.replace(/[-_](.)/g, (_, char) => char.toUpperCase())
 		.replace(/^\w/, (c) => c.toUpperCase())
 
-export const generateComponent = (name: string, svgObject: SvgParsed) => {
-	delete svgObject.width
-	delete svgObject.height
+export const toCamelCase = (str: string) =>
+	str.replace(/[-_](.)/g, (_, char) => char.toUpperCase())
 
-	let jsx = builder.build({ svg: svgObject })
+type Primitive = string | number | boolean | null
+
+export type SvgNode = {
+	[key: string]: string | Primitive | Primitive[] | SvgNode | SvgNode[]
+}
+
+export const convertAttributesToCamelCase = <T extends SvgNode>(node: T): T => {
+	const newNode: SvgNode = {}
+
+	for (const key in node) {
+		const value = node[key]
+		const newKey = toCamelCase(key)
+
+		if (typeof value === 'string') {
+			newNode[newKey] = value
+		} else if (Array.isArray(value)) {
+			newNode[newKey] = value.map((item) =>
+				typeof item === 'object'
+					? convertAttributesToCamelCase(item)
+					: item,
+			)
+		} else if (typeof value === 'object' && value !== null) {
+			newNode[newKey] = convertAttributesToCamelCase(value)
+		}
+	}
+
+	return newNode as T
+}
+
+export const generateComponent = (name: string, svgObject: SvgParsed) => {
+	const camelCasedSvg = convertAttributesToCamelCase(svgObject)
+	delete camelCasedSvg.width
+	delete camelCasedSvg.height
+
+	let jsx = builder.build({ svg: camelCasedSvg })
 	jsx = jsx
 		.replace(/<svg/, '<svg style={computedStyle} {...rest}')
 		.replace(

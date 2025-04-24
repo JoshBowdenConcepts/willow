@@ -1,6 +1,13 @@
 import fs from 'fs'
 import path from 'path'
-import { toPascalCase, generateComponent, processFiles } from './generate-icons'
+import {
+	toPascalCase,
+	generateComponent,
+	processFiles,
+	toCamelCase,
+	convertAttributesToCamelCase,
+	SvgNode,
+} from './generate-icons'
 import { XMLParser } from 'fast-xml-parser'
 
 jest.mock('fs')
@@ -16,6 +23,120 @@ const parser = new XMLParser({
 describe('toPascalCase', () => {
 	it('converts kebab-case to PascalCase', () => {
 		expect(toPascalCase('home-icon')).toBe('HomeIcon')
+	})
+})
+
+describe('toCamelCase', () => {
+	it('converts kebab-case to camelCase', () => {
+		expect(toCamelCase('stroke-width')).toBe('strokeWidth')
+	})
+})
+
+describe('convertAttributesToCamelCase', () => {
+	it('converts top-level kebab-case keys', () => {
+		const input: SvgNode = {
+			'stroke-width': '2',
+			fill: 'none',
+		}
+
+		const output = convertAttributesToCamelCase(input)
+
+		expect(output).toEqual({
+			strokeWidth: '2',
+			fill: 'none',
+		})
+	})
+
+	it('recursively converts nested objects', () => {
+		const input: SvgNode = {
+			svg: {
+				'view-box': '0 0 100 100',
+				circle: {
+					'stroke-width': '4',
+					cx: '50',
+					cy: '50',
+				},
+			},
+		}
+
+		const output = convertAttributesToCamelCase(input)
+
+		expect(output).toEqual({
+			svg: {
+				viewBox: '0 0 100 100',
+				circle: {
+					strokeWidth: '4',
+					cx: '50',
+					cy: '50',
+				},
+			},
+		})
+	})
+
+	it('converts attributes in arrays of nodes', () => {
+		const input: SvgNode = {
+			svg: {
+				path: [
+					{ 'stroke-width': '1', d: 'M0 0L10 10' },
+					{ 'stroke-width': '2', d: 'M10 10L20 20' },
+				],
+			},
+		}
+
+		const output = convertAttributesToCamelCase(input)
+
+		expect(output).toEqual({
+			svg: {
+				path: [
+					{ strokeWidth: '1', d: 'M0 0L10 10' },
+					{ strokeWidth: '2', d: 'M10 10L20 20' },
+				],
+			},
+		})
+	})
+
+	it('handles deeply nested structures', () => {
+		const input: SvgNode = {
+			svg: {
+				g: {
+					'data-name': 'Layer 1',
+					rect: {
+						'stroke-width': '1',
+						'fill-opacity': '0.5',
+					},
+				},
+			},
+		}
+
+		const output = convertAttributesToCamelCase(input)
+
+		expect(output).toEqual({
+			svg: {
+				g: {
+					dataName: 'Layer 1',
+					rect: {
+						strokeWidth: '1',
+						fillOpacity: '0.5',
+					},
+				},
+			},
+		})
+	})
+
+	it('preserves primitive values inside arrays', () => {
+		const input: SvgNode = {
+			svg: {
+				'data-values': ['1', '2', '3'],
+			},
+		}
+
+		const output = convertAttributesToCamelCase(input)
+
+		expect(output).toEqual({
+			svg: {
+				dataValues: ['1', '2', '3'],
+			},
+		})
 	})
 })
 
