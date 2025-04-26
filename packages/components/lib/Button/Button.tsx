@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { clsx } from 'clsx'
 import styles from './Button.module.css'
+import { cvar } from '../helpers'
+import { tokens } from 'tokens'
 
 type BaseProps = {
 	children?: React.ReactNode
@@ -20,10 +22,23 @@ export type ButtonProps = ButtonTagProps | AnchorTagProps
 export const Button = (props: ButtonProps) => {
 	const { as = 'button' } = props
 
+	const tokenOverrides = {
+		['--button-bgDefault']: cvar(tokens.component.button.primary.bgDefault),
+		['--button-bgHover']: cvar(tokens.component.button.primary.bgHover),
+		['--button-bgFocus']: cvar(tokens.component.button.primary.bgFocus),
+		['--button-bgDisabled']: cvar(
+			tokens.component.button.primary.bgDisabled,
+		),
+	} as CSSProperties
+
 	if (as === 'a') {
 		const { children, className, ...rest } = props as AnchorTagProps
 		return (
-			<a className={clsx(className, styles.button_root)} {...rest}>
+			<a
+				className={clsx(className, styles.button_root)}
+				style={tokenOverrides}
+				{...rest}
+			>
 				{children}
 			</a>
 		)
@@ -31,7 +46,11 @@ export const Button = (props: ButtonProps) => {
 
 	const { children, className, ...rest } = props as ButtonTagProps
 	return (
-		<button className={clsx(className, styles.button_root)} {...rest}>
+		<button
+			className={clsx(className, styles.button_root)}
+			style={tokenOverrides}
+			{...rest}
+		>
 			{children}
 		</button>
 	)
