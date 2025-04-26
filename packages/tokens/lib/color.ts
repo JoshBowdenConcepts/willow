@@ -10,7 +10,14 @@ export const color = {
 	fgPrimaryLight: palette.teal[600],
 	fgPrimaryBase: palette.teal[700],
 	fgPrimaryDark: palette.teal[800],
-	bgDefault: palette.gray[200],
+	bgBase: {
+		light: palette.white,
+		dark: palette.black,
+	},
+	bgDefault: {
+		light: palette.gray[200],
+		dark: palette.gray[800],
+	},
 	bgLight: palette.gray[50],
 	bgContrast: palette.gray[800],
 }

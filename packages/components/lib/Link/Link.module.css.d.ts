@@ -1,4 +1,5 @@
 declare const styles: {
-	readonly link_root: string
-}
-export = styles
+  readonly "link_root": string;
+};
+export = styles;
+

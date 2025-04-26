@@ -1,0 +1,45 @@
+.color_swatch {
+	padding: var(--space-300);
+	background-color: var(--color-bgBase);
+	border-radius: var(--shape-100);
+	border: 1px solid black;
+}
+
+:root {
+	--positive-color: #ffffff; /* light */
+	--negative-color: #cccccc; /* darker */
+}
+
+.checkered {
+	height: 150px;
+	width: 100%; /* or set a custom width if needed */
+	margin-bottom: var(--space-200);
+	background-color: var(--negative-color);
+	background-image:
+		linear-gradient(45deg, var(--positive-color) 25%, transparent 25%),
+		linear-gradient(-45deg, var(--positive-color) 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, var(--positive-color) 75%),
+		linear-gradient(-45deg, transparent 75%, var(--positive-color) 75%);
+	background-size: 40px 40px; /* Changing this updates the size of the squares */
+	background-position:
+		0 0,
+		0 20px,
+		20px -20px,
+		-20px 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.circle {
+	width: 100%;
+	height: 100%;
+	max-width: 150px;
+	max-height: 150px;
+	margin: var(--space-400);
+	aspect-ratio: 1 / 1;
+	background-color: var(--color-swatch);
+	border-radius: 50%;
+}

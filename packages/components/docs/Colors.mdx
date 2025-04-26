@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/blocks'
+import { tokens } from 'tokens'
+import { ColorSwatch } from './components/ColorSwatch/ColorSwatch'
+
+<Meta title="Foundation/Colors" />
+
+# Colors
+
+Color tokens are the foundation of Willow DS’s color system. They represent the raw values for colors — such as brand colors, neutrals, and accent tones — abstracted into semantic, reusable variables. By using tokens instead of hard-coded color values, we ensure consistency, flexibility, and easier theming across different products and platforms.
+
+Each token is named intentionally to reflect its role (for example, --color-background-primary or --color-text-muted), allowing teams to make design changes at scale without manually updating individual components. Tokens can be mapped to different color values based on context, such as light mode, dark mode, or brand-specific themes.
+
+Organized into categories like Backgrounds, Text, Borders, and Interactive States, color tokens help create a cohesive, accessible visual language that adapts to user needs while maintaining a unified brand identity.
+
+## Foreground Colors
+
+<div
+	style={{
+		display: 'grid',
+		gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+		gap: '1rem',
+		padding: '1rem',
+	}}
+>
+	{Object.keys(tokens.color)
+		.filter((key) => key.startsWith('fg'))
+		.map((key) => (
+			<ColorSwatch key={key} color={key} />
+		))}
+</div>
+
+## Background Colors
+
+<div
+	style={{
+		display: 'grid',
+		gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+		gap: '1rem',
+		padding: '1rem',
+	}}
+>
+	{Object.keys(tokens.color)
+		.filter((key) => key.startsWith('bg'))
+		.map((key) => (
+			<ColorSwatch key={key} color={key} />
+		))}
+</div>
