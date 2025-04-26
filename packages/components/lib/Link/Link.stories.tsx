@@ -5,7 +5,7 @@ import { TextProps, TextTags } from '../Text'
 import { Link } from './Link'
 
 const meta = {
-	title: 'Link',
+	title: 'Components/Link',
 	component: Link,
 	parameters: {
 		layout: 'centered',

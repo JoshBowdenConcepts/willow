@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Box } from './Box'
 
 const meta = {
-	title: 'Box',
+	title: 'Components/Box',
 	component: Box,
 	parameters: {
 		layout: 'centered',
