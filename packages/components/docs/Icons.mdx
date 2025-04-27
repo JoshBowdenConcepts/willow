@@ -1,0 +1,23 @@
+import { Meta, IconItem } from '@storybook/blocks'
+import * as IconList from 'icons'
+
+<Meta title="Foundation/Icons" />
+
+# Icons
+
+In our design system, icons are built as React components to ensure they are flexible, consistent, and easy to use across applications. Each icon is a standalone, reusable component that supports common props like size, color, and titleAccess for accessibility. By managing icons as React components, we can apply styling, theming, and interaction patterns seamlessly while maintaining a unified visual language. This approach also enables automatic documentation, easy updates, and better integration into our component library workflows.
+
+<div
+	style={{
+		display: 'grid',
+		gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+		gap: '1rem',
+		padding: '1rem',
+	}}
+>
+	{Object.entries(IconList).map(([key, Icon]) => (
+		<IconItem name={key}>
+			<Icon key={key} />
+		</IconItem>
+	))}
+</div>
