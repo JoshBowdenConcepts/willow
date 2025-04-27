@@ -25,7 +25,7 @@ Organized into categories like Backgrounds, Text, Borders, and Interactive State
 	{Object.keys(tokens.color)
 		.filter((key) => key.startsWith('fg'))
 		.map((key) => (
-			<ColorSwatch key={key} color={key} />
+			<ColorSwatch key={key} color={key} asText />
 		))}
 </div>
 
