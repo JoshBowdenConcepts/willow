@@ -45,6 +45,8 @@ export const Box = forwardRef(
 				maxWidth,
 				flexDirection,
 				gridAutoFlow,
+				gridTemplateColumns,
+				gridTemplateRows,
 			},
 			remaining,
 		] = pickProps(props, rootStylePropsKeys)
@@ -59,6 +61,8 @@ export const Box = forwardRef(
 			['--box-maxWidth']: maxWidth ?? 'none',
 			['--box-flexDirection']: flexDirection ?? 'column',
 			['--box-gridAutoFlow']: gridAutoFlow ?? 'row',
+			['--box-gridTemplateColumns']: gridTemplateColumns ?? 'none',
+			['--box-gridTemplateRows']: gridTemplateRows ?? 'none',
 		} as CSSProperties
 
 		return (

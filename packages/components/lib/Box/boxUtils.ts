@@ -14,6 +14,8 @@ const rootStylePropDefaults = {
 	maxWidth: undefined,
 	flexDirection: undefined,
 	gridAutoFlow: undefined,
+	gridTemplateColumns: undefined,
+	gridTemplateRows: undefined,
 } as const
 
 type SpaceKey = keyof (typeof tokens)['space'] | 'auto'
