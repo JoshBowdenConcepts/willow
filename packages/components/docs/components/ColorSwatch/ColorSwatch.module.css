@@ -11,7 +11,7 @@
 }
 
 .checkered {
-	height: 150px;
+	height: 170px;
 	width: 100%; /* or set a custom width if needed */
 	margin-bottom: var(--space-200);
 	background-color: var(--negative-color);

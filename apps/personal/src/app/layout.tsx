@@ -30,7 +30,7 @@ export default function RootLayout({
 					margin={[300, 0]}
 				>
 					<Box>
-						<Text variant="caption">JoshBowdenConcepts</Text>
+						<Text variant="caption">JOSHBOWDENCONCEPTS.COM</Text>
 					</Box>
 					<Box display="flex" alignItems="center">
 						<Box
