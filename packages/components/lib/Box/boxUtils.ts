@@ -64,3 +64,46 @@ export function oneThroughFourSpacing(
 		return '0'
 	}
 }
+
+export function oneThroughFourSpacingClass(
+	spacing?: SpaceKey | OneToFour<SpaceKey>,
+): string[] {
+	if (!spacing) return []
+
+	if (Array.isArray(spacing)) {
+		const [first, second, third, fourth] = spacing
+
+		if (spacing.length === 2) {
+			return [
+				first === 'auto' ? 'auto' : `pv_${first}`,
+				second === 'auto' ? 'auto' : `ph_${second}`,
+			]
+		}
+
+		if (spacing.length === 3) {
+			return [
+				first === 'auto' ? 'auto' : `pt_${first}`,
+				second === 'auto' ? 'auto' : `ph_${second}`,
+				third === 'auto' ? 'auto' : `pb_${third}`,
+			]
+		}
+
+		if (spacing.length === 4) {
+			return [
+				first === 'auto' ? 'auto' : `pt_${first}`,
+				second === 'auto' ? 'auto' : `pr_${second}`,
+				third === 'auto' ? 'auto' : `pb_${third}`,
+				fourth === 'auto' ? 'auto' : `pl_${fourth}`,
+			]
+		}
+	} else {
+		return [
+			spacing === 'auto' ? 'auto' : `pt_${spacing}`,
+			spacing === 'auto' ? 'auto' : `pb_${spacing}`,
+			spacing === 'auto' ? 'auto' : `pl_${spacing}`,
+			spacing === 'auto' ? 'auto' : `pr_${spacing}`,
+		]
+	}
+
+	return []
+}

@@ -1,0 +1,45 @@
+.g_0 {
+	gap: var(--space-0);
+}
+.g_100 {
+	gap: var(--space-100);
+}
+.g_200 {
+	gap: var(--space-200);
+}
+.g_300 {
+	gap: var(--space-300);
+}
+.g_400 {
+	gap: var(--space-400);
+}
+.g_500 {
+	gap: var(--space-500);
+}
+.g_600 {
+	gap: var(--space-600);
+}
+.g_700 {
+	gap: var(--space-700);
+}
+.g_800 {
+	gap: var(--space-800);
+}
+.g_900 {
+	gap: var(--space-900);
+}
+.g_1000 {
+	gap: var(--space-1000);
+}
+.g_1100 {
+	gap: var(--space-1100);
+}
+.g_1200 {
+	gap: var(--space-1200);
+}
+.g_1300 {
+	gap: var(--space-1300);
+}
+.g_1400 {
+	gap: var(--space-1400);
+}

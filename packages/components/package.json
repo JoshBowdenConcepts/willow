@@ -10,6 +10,7 @@
 	],
 	"scripts": {
 		"build": "rollup -c",
+		"test": "jest",
 		"css": "tcm -w -p '{lib,docs}/**/*.css'",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
@@ -23,6 +24,7 @@
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^3",
+		"@jest/types": "catalog:",
 		"@rollup/plugin-commonjs": "^28.0.3",
 		"@rollup/plugin-node-resolve": "^16.0.1",
 		"@rollup/plugin-typescript": "^12.1.2",
@@ -44,6 +46,7 @@
 		"clsx": "catalog:",
 		"icons": "workspace:*",
 		"jest": "catalog:",
+		"jest-environment-jsdom": "^29.7.0",
 		"jest-image-snapshot": "^6.4.0",
 		"playwright": "^1.51.1",
 		"react": "catalog:",
